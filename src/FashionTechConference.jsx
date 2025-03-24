@@ -1,34 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './FashionTechConference.css';
 
 const FashionTechConference = () => {
-  const [hours, setHours] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
-
-  useEffect(() => {
-    // Set the conference date - example: May 15, 2025
-    const conferenceDate = new Date('May 15, 2025 09:00:00').getTime();
-    
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = conferenceDate - now;
-      
-      if (distance < 0) {
-        clearInterval(timer);
-        setHours(0);
-        setMinutes(0);
-        setSeconds(0);
-      } else {
-        setHours(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-        setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
-        setSeconds(Math.floor((distance % (1000 * 60)) / 1000));
-      }
-    }, 1000);
-    
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <div className="fashion-tech-container">
       {/* Navigation */}
@@ -46,7 +19,7 @@ const FashionTechConference = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero Section - Full Screen */}
       <div className="hero-section">
         <div className="hero-content">
           <h1>Biggest Fashion Tech Conference.</h1>
@@ -61,29 +34,37 @@ const FashionTechConference = () => {
               <span>New York City, USA.</span>
             </div>
           </div>
-          
-          <div className="countdown">
-            <div className="countdown-item">
-              <div className="countdown-number">{hours}</div>
-              <div className="countdown-label">Hours</div>
+        </div>
+      </div>
+
+      {/* Dark Space with Buttons */}
+      <div className="dark-space">
+        <div className="action-buttons">
+          <button className="action-button brochure-button">Download Brochure</button>
+          <button className="action-button abstract-button">Submit Abstract</button>
+        </div>
+      </div>
+
+      {/* Pink Background Section */}
+      <div className="pink-section">
+        <div className="contact-container">
+          <h2>Get in Touch</h2>
+          <div className="contact-options">
+            <div className="contact-option">
+              <div className="contact-icon">📧</div>
+              <h3>Contact Us</h3>
+              <p>info@fashionx.com</p>
             </div>
-            <div className="countdown-item">
-              <div className="countdown-number">{minutes}</div>
-              <div className="countdown-label">Minutes</div>
-            </div>
-            <div className="countdown-item">
-              <div className="countdown-number">{seconds}</div>
-              <div className="countdown-label">Seconds</div>
+            <div className="contact-option">
+              <div className="contact-icon">🛠️</div>
+              <h3>Technical Support</h3>
+              <p>support@fashionx.com</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Navigation Arrows */}
-      <div className="nav-arrows">
-        <button className="prev-arrow">◀</button>
-        <button className="next-arrow">▶</button>
-      </div>
+      
 
       {/* Contact Button */}
       <div className="contact-button">
