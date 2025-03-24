@@ -3,11 +3,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.6;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 .container {
@@ -17,7 +20,7 @@ body {
   padding: 0 1rem;
 }
 
-/* Navigation */
+/* Navigation - Kept as requested */
 .nav-bar {
   background: linear-gradient(to right, #6b46c1, #d53f8c);
   color: white;
@@ -57,12 +60,14 @@ body {
   cursor: pointer;
 }
 
-/* Hero Section */
+/* Hero Section - Kept as requested */
 .hero-section {
   background: linear-gradient(to right, #6b46c1, #d53f8c);
   color: white;
   padding: 4rem 1rem;
   text-align: center;
+  width: 100vw;
+  
 }
 
 .hero-title {
@@ -96,28 +101,34 @@ body {
   border: none;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
 }
 
+/* Updated Button Styles */
 .btn-pink {
   background-color: #d53f8c;
+  box-shadow: 0 0 15px rgba(213, 63, 140, 0.5);
 }
 
 .btn-pink:hover {
   background-color: #c3397d;
+  box-shadow: 0 0 20px rgba(213, 63, 140, 0.7);
 }
 
 .btn-purple {
   background-color: #6b46c1;
+  box-shadow: 0 0 15px rgba(107, 70, 193, 0.5);
 }
 
 .btn-purple:hover {
   background-color: #5a37a3;
+  box-shadow: 0 0 20px rgba(107, 70, 193, 0.7);
 }
 
-/* Section Styles */
+/* Section Styles - Updated for dark theme */
 .section {
   padding: 3rem 1rem;
+  border-bottom: 1px solid #2a2a2a;
 }
 
 .section-title {
@@ -125,10 +136,13 @@ body {
   font-weight: bold;
   text-align: center;
   margin-bottom: 2rem;
+  color: #d53f8c;
+  text-shadow: 0 0 10px rgba(213, 63, 140, 0.3);
 }
 
+/* Updated background for alternating sections */
 .bg-gray {
-  background-color: #f7fafc;
+  background-color: #1a1a1a;
 }
 
 /* About Section */
@@ -141,16 +155,23 @@ body {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: #6b46c1;
 }
 
 .text-content {
   margin-bottom: 1rem;
+  color: #b0b0b0;
 }
 
 /* Theme Content */
 .theme-content, .objectives-content, .papers-content {
   max-width: 48rem;
   margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #1e1e1e;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-left: 4px solid #d53f8c;
 }
 
 /* Objectives List */
@@ -163,12 +184,21 @@ body {
 .objective-item, .paper-item {
   display: flex;
   align-items: flex-start;
+  background-color: #252525;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+}
+
+.objective-item:hover, .paper-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 0 10px rgba(107, 70, 193, 0.3);
 }
 
 .bullet {
-  color: #6b46c1;
+  color: #d53f8c;
   font-weight: bold;
-  margin-right: 0.5rem;
+  margin-right: 0.75rem;
 }
 
 /* Papers List */
@@ -181,10 +211,11 @@ body {
 .dates-table-container, .registration-table-container, .sponsor-table-container {
   max-width: 32rem;
   margin: 0 auto;
-  background-color: white;
+  background-color: #1e1e1e;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  border: 1px solid #2a2a2a;
 }
 
 .registration-table-container {
@@ -197,7 +228,7 @@ body {
 }
 
 .table-header {
-  background-color: #6b46c1;
+  background: linear-gradient(to right, #6b46c1, #d53f8c);
   color: white;
 }
 
@@ -207,7 +238,12 @@ body {
 }
 
 .table-row {
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #2a2a2a;
+  transition: background-color 0.2s ease;
+}
+
+.table-row:hover {
+  background-color: #252525;
 }
 
 .table-row td {
@@ -215,17 +251,18 @@ body {
 }
 
 .alt-row {
-  background-color: #f7fafc;
+  background-color: #181818;
 }
 
 .registration-note {
   padding: 1rem;
-  background-color: #f7fafc;
-  border-top: 1px solid #e2e8f0;
+  background-color: #252525;
+  border-top: 1px solid #2a2a2a;
 }
 
 .note-title {
   font-weight: 600;
+  color: #d53f8c;
 }
 
 /* Contact */
@@ -235,10 +272,11 @@ body {
 }
 
 .contact-card {
-  background-color: white;
+  background-color: #1e1e1e;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   padding: 1.5rem;
+  border-top: 4px solid #6b46c1;
 }
 
 .contact-info {
@@ -247,20 +285,24 @@ body {
 
 .committee-info {
   margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #2a2a2a;
 }
 
 .committee-title {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 0.75rem;
+  color: #d53f8c;
 }
 
-/* Footer */
+/* Footer - Enhanced for dark theme */
 .footer {
-  background-color: #44337a;
+  background: linear-gradient(to right, #44337a, #701a43);
   color: white;
   padding: 2rem 1rem;
   text-align: center;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .footer-text {
@@ -271,14 +313,18 @@ body {
   font-size: 1.125rem;
   font-weight: bold;
   margin-bottom: 0.25rem;
+  color: #fbd5e3;
 }
 
 .footer-college {
   margin-bottom: 1rem;
+  color: #e0e0e0;
 }
 
 .footer-copyright {
   margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Media Queries */
@@ -311,4 +357,25 @@ body {
   .mobile-menu-button {
     display: none;
   }
+}
+
+/* Add subtle animations and glow effects */
+@keyframes subtle-glow {
+  0% { box-shadow: 0 0 5px rgba(107, 70, 193, 0.2); }
+  50% { box-shadow: 0 0 15px rgba(213, 63, 140, 0.3); }
+  100% { box-shadow: 0 0 5px rgba(107, 70, 193, 0.2); }
+}
+
+.section-title, .subsection-title {
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #6b46c1, #d53f8c);
+  margin: 0.5rem auto 0;
+  border-radius: 3px;
 }
