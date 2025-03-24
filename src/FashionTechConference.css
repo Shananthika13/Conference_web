@@ -11,10 +11,12 @@ html, body {
 }
 
 .fashion-tech-container {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: relative;
   font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Navigation Styles */
@@ -56,9 +58,8 @@ html, body {
 
 /* Hero Section Styles */
 .hero-section {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  min-height: 100vh;
   background: linear-gradient(135deg, #6a0079 0%, #e91e63 100%);
   display: flex;
   align-items: center;
