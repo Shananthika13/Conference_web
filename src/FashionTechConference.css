@@ -1,7 +1,5 @@
 /* Base Styles */
 * {
-  width: 100%;
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,7 +14,7 @@ body {
 }
 
 .container {
- 
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -24,7 +22,6 @@ body {
 
 /* Navigation - Kept as requested */
 .nav-bar {
-  
   background: linear-gradient(to right, #6b46c1, #d53f8c);
   color: white;
 }
@@ -65,7 +62,6 @@ body {
 
 /* Hero Section - Kept as requested */
 .hero-section {
-  
   background: linear-gradient(to right, #6b46c1, #d53f8c);
   color: white;
   padding: 4rem 1rem;
@@ -131,7 +127,6 @@ body {
 
 /* Section Styles - Updated for dark theme */
 .section {
-  
   padding: 3rem 1rem;
   border-bottom: 1px solid #2a2a2a;
 }
@@ -152,7 +147,6 @@ body {
 
 /* About Section */
 .about-grid {
-  
   display: grid;
   gap: 2rem;
 }
@@ -165,7 +159,6 @@ body {
 }
 
 .text-content {
-  
   margin-bottom: 1rem;
   color: #b0b0b0;
 }
@@ -305,7 +298,7 @@ body {
 
 /* Footer - Enhanced for dark theme */
 .footer {
-  background-color: #44337a;
+  background: linear-gradient(to right, #44337a, #701a43);
   color: white;
   padding: 2rem 1rem;
   text-align: center;
