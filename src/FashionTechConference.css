@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.fashion-tech-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navigation Styles */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Hero Section Styles */
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a0079 0%, #e91e63 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  background-size: cover;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/fashion-microphone.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* Countdown Styles */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-number {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.countdown-label {
+  font-size: 16px;
+}
+
+/* Navigation Arrows */
+.nav-arrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.prev-arrow, .next-arrow {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.prev-arrow:hover, .next-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Contact Button */
+.contact-button {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 5;
+}
+
+.contact-button button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  color: #e91e63;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.contact-button button:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navigation {
+      padding: 15px;
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  h1 {
+      font-size: 36px;
+  }
+
+  .event-details {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .countdown {
+      gap: 15px;
+  }
+
+  .countdown-number {
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+  }
+}
