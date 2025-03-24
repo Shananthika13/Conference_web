@@ -60,7 +60,7 @@ html, body {
 .hero-section {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(135deg, #6a0079 0%, #e91e63 100%);
+  background: linear-gradient(500deg, #6a0079 20%, #e91e63 100%);
   display: flex;
   align-items: center;
   justify-content: center;
