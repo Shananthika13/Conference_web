@@ -1,0 +1,50 @@
+/* Navigation CSS - Same as in the original CSS file */
+.nav-bar {
+    background: linear-gradient(to right, #6b46c1, #d53f8c);
+    color: white;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+  }
+  
+  .conference-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+  }
+  
+  .nav-link:hover {
+    color: #fbd5e3;
+  }
+  
+  .mobile-menu-button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  @media (min-width: 768px) {
+    .nav-links {
+      display: flex;
+      space-x: 1.5rem;
+    }
+    
+    .mobile-menu-button {
+      display: none;
+    }
+  }

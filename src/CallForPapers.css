@@ -1,0 +1,40 @@
+.papers-content {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #1e1e1e;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #d53f8c;
+  }
+  
+  .papers-list {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .paper-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: #252525;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+  }
+  
+  .paper-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 0 10px rgba(107, 70, 193, 0.3);
+  }
+  
+  .bullet {
+    color: #d53f8c;
+    font-weight: bold;
+    margin-right: 0.75rem;
+  }
+  
+  @media (min-width: 768px) {
+    .papers-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }

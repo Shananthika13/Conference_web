@@ -1,0 +1,14 @@
+.theme-content {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #1e1e1e;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #d53f8c;
+  }
+  
+  .text-content {
+    color: #b0b0b0;
+    margin-bottom: 1rem;
+  }

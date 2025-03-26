@@ -1,0 +1,41 @@
+.dates-table-container {
+    max-width: 32rem;
+    margin: 0 auto;
+    background-color: #1e1e1e;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+  }
+  
+  .dates-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-header {
+    background: linear-gradient(to right, #6b46c1, #d53f8c);
+    color: white;
+  }
+  
+  .table-header th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+  }
+  
+  .table-row {
+    border-bottom: 1px solid #2a2a2a;
+    transition: background-color 0.2s ease;
+  }
+  
+  .table-row:hover {
+    background-color: #252525;
+  }
+  
+  .table-row td {
+    padding: 0.75rem 1rem;
+  }
+  
+  .alt-row {
+    background-color: #181818;
+  }
