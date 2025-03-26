@@ -2,13 +2,13 @@ import React from 'react';
 import './App.css';
 
 // Import all components
-import Navigation from './Components/Navigation/Navigation';
-import HeroSection from './Components/HeroSection/HeroSection';
-import About from './Components/About/About';
-import ConferenceTheme from './Components/ConferenceTheme/ConferenceTheme';
-import Objectives from './Components/Objectives/Objectives';
-import CallForPapers from './Components/CallForPapers/CallForPapers';
-import ImportantDates from './Components/ImportantDates/ImportantDates';
+import Navigation from './components/Navigation/Navigation';
+import HeroSection from './components/HeroSection/HeroSection';
+import About from './components/About/About';
+import ConferenceTheme from './components/ConferenceTheme/ConferenceTheme';
+import Objectives from './components/Objectives/Objectives';
+import CallForPapers from './components/CallForPapers/CallForPapers';
+import ImportantDates from './components/ImportantDates/ImportantDates';
 
 
 function App() {
