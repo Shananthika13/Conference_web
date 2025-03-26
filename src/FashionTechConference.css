@@ -65,11 +65,12 @@ body {
   color: white;
   padding: 4rem 1rem;
   text-align: center;
-  background-image: url('https://i.pinimg.com/736x/ab/a2/f8/aba2f8c752335ded747f4a64b9841eef.jpg');
+  background-image: url('https://t4.ftcdn.net/jpg/02/66/21/33/360_F_266213344_PuKYbxcWQVp3q8rJg3F42EmNaemsdFot.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
+  height:100vh;
 }
 
 /* This overlay creates the semi-transparent effect */

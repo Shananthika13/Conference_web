@@ -13,7 +13,7 @@ const FashionTechConference = () => {
             <a href="#about" className="nav-link">About</a>
             <a href="#speakers" className="nav-link">Speakers</a>
             <a href="#schedule" className="nav-link">Schedule</a>
-            <a href="#tickets" className="nav-link">Tickets</a>
+            
             <a href="#register" className="nav-link">Register</a>
             <a href="#gallery" className="nav-link">Gallery</a>
             <a href="#sponsors" className="nav-link">Sponsors</a>
