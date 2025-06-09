@@ -49,7 +49,12 @@ const FashionTechConference = () => {
             <div>
               <h3 className="subsection-title">PSG COLLEGE OF TECHNOLOGY</h3>
               <p className="text-content">
-                PSG College of Technology, an ISO 9001:2008 certified institution is one of the foremost institutions founded by PSG & Sons Charities Trust (1926). The College was established in the year 1951. The College has 15 engineering and technology departments. As a pioneer of educational innovations in the country, the college offers courses across engineering and science at Bachelors, Masters, M.Phil, MS, and Ph.D levels on full time and part-time basis.
+              PSG College of Technology, an ISO 9001:2015 certified institution is one of the
+foremost institutions founded by the PSG & Sons’ Charities Trust (1926). The College
+was established in the year 1951. The College offers 21 Undergraduate programmes
+including BE / BTech / BSc, 24 Postgraduate programmes including ME / MTech / MSc (5
+year integrated) / MSc (2 year) / MBA / MCA and research programmes with the
+college being a recognized QIP centre for Postgraduate and PhD programmes.
               </p>
             </div>
             
