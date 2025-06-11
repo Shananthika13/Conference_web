@@ -168,52 +168,69 @@ const FashionTechConference = () => {
       </section>
 
       {/* Registration */}
-      <section id="registration" className="section">
-        <div className="container">
-          <h2 className="section-title">Registration</h2>
-          <div className="registration-content">
-            <div className="registration-table-container">
-              <table className="registration-table">
-                <thead>
-                  <tr>
-                    <th>Category</th>
-                    <th>Early Bird (Before Aug 08)</th>
-                    <th>Regular (After Aug 08)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Industry Professionals</td>
-                    <td>₹ 5,000</td>
-                    <td>₹ 6,000</td>
-                  </tr>
-                  <tr>
-                    <td>Faculty/Research Scholars</td>
-                    <td>₹ 3,000</td>
-                    <td>₹ 3,500</td>
-                  </tr>
-                  <tr>
-                    <td>UG/PG Students</td>
-                    <td>₹ 1,500</td>
-                    <td>₹ 1,750</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div className="registration-info">
-              <h3>Registration Includes:</h3>
-              <ul>
-                <li>Conference Kit</li>
-                <li>Access to All Presentations</li>
-                <li>Conference Lunch and Refreshments</li>
-                <li>Conference Proceedings</li>
-                <li>Conference Souvenir</li>
-                <li>Certificate of Participation</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="section bg-gray">
+  <div className="container">
+    <h2 className="section-title">Registration</h2>
+
+    {/* REGISTRATION TABLE */}
+    <div className="registration-table-container">
+      <table className="registration-table">
+        <thead className="table-header">
+          <tr>
+            <th>Category</th>
+            <th>Early Bird (Before Aug 08)</th>
+            <th>Regular (After Aug 08)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="table-row">
+            <td>Industry Professionals</td>
+            <td>₹ 5,000</td>
+            <td>₹ 6,000</td>
+          </tr>
+          <tr className="table-row alt-row">
+            <td>Faculty/Research Scholars</td>
+            <td>₹ 3,000</td>
+            <td>₹ 3,500</td>
+          </tr>
+          <tr className="table-row">
+            <td>UG/PG Students</td>
+            <td>₹ 1,500</td>
+            <td>₹ 1,750</td>
+          </tr>
+        </tbody>
+      </table>
+
+      {/* NOTE */}
+      <div className="registration-note">
+        <p className="note-title">The registration fee includes:</p>
+        <p className="note-content">
+          Conference kit, access to all presentations, conference lunch, and refreshments. Each participant will receive conference proceedings, conference souvenir, docket and a certificate.
+        </p>
+      </div>
+    </div>
+
+    {/* MODE OF PAYMENT */}
+    <div className="payment-box">
+      <h3>Mode of Payment for Registration</h3>
+      <ul>
+        <li><strong>Payment Type:</strong> Internet/Mobile Banking / GPay / Paytm</li>
+        <li><strong>Account Number:</strong> 1481267367</li>
+        <li><strong>Account Holder:</strong> PSG Centre for Non formal and Continuing Education (PSG CNCE)</li>
+        <li><strong>Bank Name:</strong> Central Bank of India</li>
+        <li><strong>Branch Name:</strong> Peelamedu</li>
+        <li><strong>IFSC Code:</strong> CBIN0280913</li>
+      </ul>
+    </div>
+    <div className="button-container">
+  <button className="register-button">Register Now</button>
+</div>
+
+  </div>
+</section>
+
+
+
 
       {/* Committee Section */}
       <section id="committee" className="section bg-light">
