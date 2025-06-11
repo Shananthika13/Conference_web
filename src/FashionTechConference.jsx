@@ -146,139 +146,182 @@ const FashionTechConference = () => {
       <section id="dates" className="section bg-light">
         <div className="container">
           <h2 className="section-title">Important Dates</h2>
-          <div className="dates-grid">
-            <div className="date-card">
-              <div className="date">July 04, 2025</div>
-              <div className="date-event">Abstract Submission Deadline</div>
-            </div>
-            <div className="date-card">
+          <div className="dates-timeline">
+            <div className="timeline-item">
               <div className="date">July 15, 2025</div>
-              <div className="date-event">Abstract Acceptance Notification</div>
+              <div className="date-event">Submission of Abstracts</div>
             </div>
-            <div className="date-card">
-              <div className="date">August 01, 2025</div>
+            <div className="timeline-connector"></div>
+            <div className="timeline-item">
+              <div className="date">July 25, 2025</div>
+              <div className="date-event">Acceptance of Abstracts</div>
+            </div>
+            <div className="timeline-connector"></div>
+            <div className="timeline-item">
+              <div className="date">Aug 15, 2025</div>
               <div className="date-event">Full Paper Submission</div>
             </div>
-            <div className="date-card">
-              <div className="date">August 22, 2025</div>
-              <div className="date-event">Registration Deadline</div>
+            <div className="timeline-connector"></div>
+            <div className="timeline-item">
+              <div className="date">Aug 18, 2025</div>
+              <div className="date-event">Registration starts on</div>
+            </div>
+            <div className="timeline-connector"></div>
+            <div className="timeline-item">
+              <div className="date">Sep 12, 2025</div>
+              <div className="date-event">Last Date for Registration</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Registration */}
-      <section id="registration" className="section">
-        <div className="container">
-          <h2 className="section-title">Registration</h2>
-          <div className="registration-content">
-            <div className="registration-table-container">
-              <table className="registration-table">
-                <thead>
-                  <tr>
-                    <th>Category</th>
-                    <th>Early Bird (Before Aug 08)</th>
-                    <th>Regular (After Aug 08)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Industry Professionals</td>
-                    <td>₹ 5,000</td>
-                    <td>₹ 6,000</td>
-                  </tr>
-                  <tr>
-                    <td>Faculty/Research Scholars</td>
-                    <td>₹ 3,000</td>
-                    <td>₹ 3,500</td>
-                  </tr>
-                  <tr>
-                    <td>UG/PG Students</td>
-                    <td>₹ 1,500</td>
-                    <td>₹ 1,750</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div className="registration-info">
-              <h3>Registration Includes:</h3>
-              <ul>
-                <li>Conference Kit</li>
-                <li>Access to All Presentations</li>
-                <li>Conference Lunch and Refreshments</li>
-                <li>Conference Proceedings</li>
-                <li>Conference Souvenir</li>
-                <li>Certificate of Participation</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section id="registration"className="section bg-gray">
+  <div className="container">
+    <h2 className="section-title">Registration</h2>
+
+
+      {/* Registration */}
+      <div className="registration-table-container">
+      <table className="registration-table">
+        <thead className="table-header">
+          <tr>
+            <th>Category</th>
+            <th>Early Bird (Before Aug 08)</th>
+            <th>Regular (After Aug 08)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="table-row">
+            <td>Industry Professionals</td>
+            <td>₹ 5,000</td>
+            <td>₹ 6,000</td>
+          </tr>
+          <tr className="table-row alt-row">
+            <td>Faculty/Research Scholars</td>
+            <td>₹ 3,000</td>
+            <td>₹ 3,500</td>
+          </tr>
+          <tr className="table-row">
+            <td>UG/PG Students</td>
+            <td>₹ 1,500</td>
+            <td>₹ 1,750</td>
+          </tr>
+        </tbody>
+      </table>
+
+      {/* NOTE */}
+      <div className="registration-note">
+        <p className="note-title">The registration fee includes:</p>
+        <p className="note-content">
+          Conference kit, access to all presentations, conference lunch, and refreshments. Each participant will receive conference proceedings, conference souvenir, docket and a certificate.
+        </p>
+      </div>
+    </div>
+
+    {/* MODE OF PAYMENT */}
+    <div className="payment-box">
+      <h3>Mode of Payment for Registration</h3>
+      <ul>
+        <li><strong>Payment Type:</strong> Internet/Mobile Banking / GPay / Paytm</li>
+        <li><strong>Account Number:</strong> 1481267367</li>
+        <li><strong>Account Holder:</strong> PSG Centre for Non formal and Continuing Education (PSG CNCE)</li>
+        <li><strong>Bank Name:</strong> Central Bank of India</li>
+        <li><strong>Branch Name:</strong> Peelamedu</li>
+        <li><strong>IFSC Code:</strong> CBIN0280913</li>
+      </ul>
+    </div>
+    <div className="button-container">
+  <button className="register-button">Register Now</button>
+</div>
+
+  </div>
+</section>
+
+
+
+
+      
 
       {/* Committee Section */}
       <section id="committee" className="section bg-light">
         <div className="container">
-          <h2 className="section-title">Advisory & Organizing Committee</h2>
-          
-          <div className="committee-grid">
-            <div className="committee-card">
-              <h3>Chief Patron</h3>
-              <p>Shri L. Gopalakrishnan</p>
-              <p className="designation">Managing Trustee</p>
-              <p>PSG & Sons' Charities</p>
+          {/* Advisory Committee */}
+          <div className="committee-section advisory">
+            <h2 className="section-title">ADVISORY COMMITTEE</h2>
+            <div className="advisory-grid">
+              <div className="advisor-card">
+                <div className="advisor-content">
+                  <h3>Dr. Kaustav SenGupta</h3>
+                  <div className="advisor-role">Associate Professor, Centre Coordinator and Chairperson I/C- NIFT Campus, Chennai.</div>
+                </div>
+              </div>
+              <div className="advisor-card">
+                <div className="advisor-content">
+                  <h3>Dr. Deepa Chandran</h3>
+                  <div className="advisor-role">Sustainability Head - Lifestyle Brands, Aditya Birla Fashion & Retail Limited, Bengaluru</div>
+                </div>
+              </div>
+              <div className="advisor-card">
+                <div className="advisor-content">
+                  <h3>Mr. Dharmender Khanna</h3>
+                  <div className="advisor-role">Head of Brand and Digital Transformation SSIPL Retail Limited, Haryana.</div>
             </div>
-
-            <div className="committee-card">
-              <h3>Patron</h3>
-              <p>Dr. P. Prakash</p>
-              <p className="designation">Principal</p>
-              <p>PSG College of Technology</p>
             </div>
-
-            <div className="committee-card">
-              <h3>Co-Patron</h3>
-              <p>Dr. G. Chandramohan</p>
-              <p className="designation">Vice Principal</p>
-              <p>PSG College of Technology</p>
+              <div className="advisor-card">
+                <div className="advisor-content">
+                  <h3>Mr. D. M. Kumar</h3>
+                  <div className="advisor-role">CEO, M/s Eastern Global Clothing, Tiruppur.</div>
             </div>
           </div>
-
-          <div className="committee-section">
-            <h3 className="committee-subtitle">Conference Chair</h3>
-            <div className="committee-members">
-              <div className="member">
-                <p><strong>Dr. K. Sangeetha</strong></p>
-                <p>Associate Professor & Head</p>
-                <p>Department of Apparel and Fashion Design</p>
+              <div className="advisor-card">
+                <div className="advisor-content">
+                  <h3>Mr. Shashank Johri</h3>
+                  <div className="advisor-role">Research and Design - UX Design for Sustainability, A Bunch of Designers (ABOD), Founder, Bengaluru.</div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="committee-section">
-            <h3 className="committee-subtitle">Organizing Secretaries</h3>
-            <div className="committee-members">
-              <div className="member">
-                <p><strong>Dr. S. Kavitha</strong></p>
-                <p>Associate Professor</p>
+          {/* Organizing Committee */}
+          <div className="committee-section organizing">
+            <h2 className="section-title">ORGANIZING COMMITTEE</h2>
+            <div className="org-compact">
+              <div className="org-row">
+                <div className="org-member">
+                  <div className="member-role">Patron</div>
+                  <div className="member-info">
+                    <h3>Shri L. Gopalakrishnan</h3>
+                    <p>Managing Trustee, PSG & Sons' Charities, Coimbatore</p>
+                  </div>
+                </div>
+                <div className="org-member">
+                  <div className="member-role">Chairman</div>
+                  <div className="member-info">
+                    <h3>Dr. K. Prakasan</h3>
+                    <p>Principal, PSG College of Technology, Coimbatore</p>
+                  </div>
+                </div>
               </div>
-              <div className="member">
-                <p><strong>Dr. V. Maheshwari</strong></p>
-                <p>Assistant Professor</p>
+              <div className="org-row">
+                <div className="org-member">
+                  <div className="member-role">Convener</div>
+                  <div className="member-info">
+                    <h3>Dr. D. Vijayalakshmi</h3>
+                    <p>Professor & Head, Department of Apparel & Fashion Design, PSG College of Technology, Coimbatore</p>
+                  </div>
+                </div>
+                <div className="org-member">
+                  <div className="member-role">Organizing Secretaries</div>
+                  <div className="member-info">
+                    <div className="secretary-group">
+                      <h3>Dr. Nirmala Varghese</h3>
+                      <h3>Dr. Mariyam Adnan</h3>
+                      <p>Associate Professors, Department of Apparel & Fashion Design, PSG College of Technology, Coimbatore</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div className="committee-section">
-            <h3 className="committee-subtitle">Organizing Committee</h3>
-            <div className="committee-members organizing-grid">
-              <div className="member">Dr. R. Surjit</div>
-              <div className="member">Dr. M. Parthiban</div>
-              <div className="member">Dr. R. Rathinamoorthy</div>
-              <div className="member">Dr. P. Suntharamoorthy</div>
-              <div className="member">Dr. J. Srinivasan</div>
-              <div className="member">Dr. T. Ramachandran</div>
-              <div className="member">Dr. C. Vigneswaran</div>
-              <div className="member">Dr. V. Subramaniam</div>
             </div>
           </div>
         </div>
@@ -288,73 +331,65 @@ const FashionTechConference = () => {
       <section id="sponsors" className="section">
         <div className="container">
           <h2 className="section-title">Sponsorship Opportunities</h2>
-          
-          <div className="sponsors-content">
-            <div className="sponsors-table-container">
-              <table className="sponsors-table">
-                <thead>
-                  <tr>
-                    <th>Category</th>
-                    <th>Amount (₹)</th>
-                    <th>Benefits</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Platinum Sponsor</td>
-                    <td>70,000</td>
-                    <td>
+          <div className="sponsor-cards">
+            <div className="sponsor-card platinum">
+              <div className="sponsor-badge">Platinum</div>
+              <div className="sponsor-amount">₹70,000</div>
+              <div className="sponsor-benefits">
                       <ul>
                         <li>Logo placement on all conference materials</li>
                         <li>Exhibition space at prime location</li>
                         <li>4 complimentary registrations</li>
                       </ul>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Gold Sponsor</td>
-                    <td>50,000</td>
-                    <td>
+              </div>
+            </div>
+
+            <div className="sponsor-card gold">
+              <div className="sponsor-badge">Gold</div>
+              <div className="sponsor-amount">₹50,000</div>
+              <div className="sponsor-benefits">
                       <ul>
                         <li>Logo placement on conference website</li>
                         <li>Exhibition space</li>
                         <li>2 complimentary registrations</li>
                       </ul>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Delegate Kit Sponsor</td>
-                    <td>30,000</td>
-                    <td>
-                      <ul>
-                        <li>Logo on delegate kits</li>
-                        <li>1 complimentary registration</li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Lunch Sponsor (Per Day)</td>
-                    <td>75,000</td>
-                    <td>
+              </div>
+            </div>
+
+            <div className="sponsor-card special lunch">
+              <div className="sponsor-badge">Lunch Sponsor</div>
+              <div className="sponsor-amount">₹75,000</div>
+              <div className="sponsor-subtitle">Per Day</div>
+              <div className="sponsor-benefits">
                       <ul>
                         <li>Banner display at lunch area</li>
                         <li>Special mention during lunch</li>
                         <li>2 complimentary registrations</li>
                       </ul>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Refreshments Sponsor (Per Day)</td>
-                    <td>25,000</td>
-                    <td>
+              </div>
+            </div>
+
+            <div className="sponsor-card kit">
+              <div className="sponsor-badge">Delegate Kit</div>
+              <div className="sponsor-amount">₹30,000</div>
+              <div className="sponsor-benefits">
+                <ul>
+                  <li>Logo on delegate kits</li>
+                  <li>1 complimentary registration</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="sponsor-card special refreshments">
+              <div className="sponsor-badge">Refreshments</div>
+              <div className="sponsor-amount">₹25,000</div>
+              <div className="sponsor-subtitle">Per Day</div>
+              <div className="sponsor-benefits">
                       <ul>
                         <li>Banner display at refreshment area</li>
                         <li>1 complimentary registration</li>
                       </ul>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              </div>
             </div>
           </div>
         </div>
