@@ -752,14 +752,15 @@ body::before {
 }
 
 /* Theme Grid */
-.theme-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.theme-grid { 
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .theme-card {
+  width: 100%; /* Makes the card take full width of the container */
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(245, 245, 220, 0.95));
   padding: 2rem;
   border-radius: 10px;
@@ -779,7 +780,7 @@ body::before {
   margin-bottom: 1rem;
   font-family: 'Playfair Display', serif;
 }
-
+ 
 /* Papers Grid */
 .papers-grid {
   display: grid;
