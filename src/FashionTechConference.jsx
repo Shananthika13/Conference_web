@@ -394,6 +394,12 @@ const FashionTechConference = () => {
               </div>
             </div>
           </div>
+          
+          <div className="button-container">
+            <button className="register-button" onClick={() => window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScH70vv_hrP16fRkEQZ0_bsgi69phIsNT4xul6lfegnZ774Fw/viewform?usp=header'}>
+              Become a Sponsor
+            </button>
+          </div>
         </div>
       </section>
 
@@ -424,19 +430,110 @@ const FashionTechConference = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-logo">NCDTF 2025</div>
-            <div className="footer-info">
-              <p>Department of Apparel and Fashion Design</p>
-              <p>PSG College of Technology</p>
-              <p>Coimbatore - 641004, Tamil Nadu, India</p>
+      {/* Modern Interactive Footer */}
+      <footer className="modern-footer">
+        <div className="footer-waves">
+          <div className="wave wave1"></div>
+          <div className="wave wave2"></div>
+          <div className="wave wave3"></div>
+        </div>
+        
+        <div className="footer-container">
+          <div className="footer-main">
+            <div className="footer-brand">
+              <div className="brand-logo">
+                <h2>NCDTF 2025</h2>
+                <div className="brand-tagline">Disruptive Technologies in Fashion</div>
+              </div>
+              <p className="brand-description">
+                Join us for an innovative conference exploring how AI, 3D printing, 
+                and emerging technologies are revolutionizing the fashion industry.
+              </p>
+              <div className="social-icons">
+                <a href="#" className="social-icon" data-platform="facebook">
+                  <i className="fab fa-facebook-f"></i>
+                  <span className="tooltip">Facebook</span>
+                </a>
+                <a href="#" className="social-icon" data-platform="twitter">
+                  <i className="fab fa-twitter"></i>
+                  <span className="tooltip">Twitter</span>
+                </a>
+                <a href="#" className="social-icon" data-platform="linkedin">
+                  <i className="fab fa-linkedin-in"></i>
+                  <span className="tooltip">LinkedIn</span>
+                </a>
+                <a href="#" className="social-icon" data-platform="instagram">
+                  <i className="fab fa-instagram"></i>
+                  <span className="tooltip">Instagram</span>
+                </a>
+              </div>
+            </div>
+            
+            <div className="footer-links">
+              <div className="link-group">
+                <h4>Quick Access</h4>
+                <ul>
+                  <li><a href="#home"><i className="fas fa-home"></i> Home</a></li>
+                  <li><a href="#about"><i className="fas fa-info-circle"></i> About</a></li>
+                  <li><a href="#speakers"><i className="fas fa-microphone"></i> Speakers</a></li>
+                  <li><a href="#schedule"><i className="fas fa-calendar"></i> Schedule</a></li>
+                </ul>
+              </div>
+              
+              <div className="link-group">
+                <h4>Conference</h4>
+                <ul>
+                  <li><a href="#registration"><i className="fas fa-ticket-alt"></i> Registration</a></li>
+                  <li><a href="#sponsors"><i className="fas fa-handshake"></i> Sponsors</a></li>
+                  <li><a href="#gallery"><i className="fas fa-images"></i> Gallery</a></li>
+                  <li><a href="#contact"><i className="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="footer-contact">
+              <h4>Get In Touch</h4>
+              <div className="contact-info">
+                <div className="contact-item">
+                  <div className="contact-icon">
+                    <i className="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div className="contact-details">
+                    <strong>Location</strong>
+                    <span>PSG College of Technology<br/>Coimbatore - 641004, Tamil Nadu</span>
+                  </div>
+                </div>
+                
+                <div className="contact-item">
+                  <div className="contact-icon">
+                    <i className="fas fa-envelope"></i>
+                  </div>
+                  <div className="contact-details">
+                    <strong>Email</strong>
+                    <span>ncdtf2025@psgtech.ac.in</span>
+                  </div>
+                </div>
+                
+                <div className="contact-item">
+                  <div className="contact-icon">
+                    <i className="fas fa-phone"></i>
+                  </div>
+                  <div className="contact-details">
+                    <strong>Phone</strong>
+                    <span>+91-422-2572177</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          
           <div className="footer-bottom">
-            <p>&copy; 2025 NCDTF. All rights reserved.</p>
+            <div className="footer-bottom-content">
+              <div className="copyright">
+                <p>&copy; 2025 NCDTF - National Conference on Disruptive Technologies in Fashion</p>
+                <p>Organized by <strong>Department of Apparel & Fashion Design, PSG College of Technology</strong></p>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
