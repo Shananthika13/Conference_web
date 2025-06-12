@@ -50,7 +50,7 @@ const FashionTechConference = () => {
             <button className="btn btn-primary" onClick={handleDownloadBrochure}>
               Download Brochure
             </button>
-            <button className="btn btn-primary">
+            <button className="btn btn-primary" onClick={() => window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdHWy5NHK16WlyP6rrO2_hOnzTCncLNST8uhwiJpAn2gP0c0Q/viewform'}>
               Submit Abstract
             </button>
           </div>
@@ -232,7 +232,9 @@ const FashionTechConference = () => {
       </ul>
     </div>
     <div className="button-container">
-  <button className="register-button">Register Now</button>
+  <button className="register-button"  onClick={() => window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfMMF5r9pxcJ7miRCXiPGM3kiKqJzxgy4WRfS5XTh6xgkCfEQ/viewform'}>
+
+    Register Now</button>
 </div>
 
   </div>
