@@ -1,294 +1,423 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './FashionTechConference.css';
+import brochurePDF from './assets/documents/Final Brochure design.pdf';
 
 const FashionTechConference = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleDownloadBrochure = () => {
+    window.open(brochurePDF, '_blank');
+  };
+
   return (
     <div className="conference-container">
       {/* Navigation Bar */}
-      <nav className="nav-bar">
+      <nav className={`nav-bar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container nav-container">
           <div className="conference-logo">NCDTF 2025</div>
           <div className="nav-links">
-            <a href="#home" className="nav-link">Home</a>
-            <a href="#about" className="nav-link">About</a>
-            <a href="#speakers" className="nav-link">Speakers</a>
-            <a href="#schedule" className="nav-link">Schedule</a>
-            
-            <a href="#register" className="nav-link">Register</a>
-            <a href="#gallery" className="nav-link">Gallery</a>
-            <a href="#sponsors" className="nav-link">Sponsors</a>
+            <a href="#home" className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>Home</a>
+            <a href="#about" className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}>About</a>
+            <a href="#theme" className={`nav-link ${activeSection === 'theme' ? 'active' : ''}`}>Theme</a>
+            <a href="#papers" className={`nav-link ${activeSection === 'papers' ? 'active' : ''}`}>Call for Papers</a>
+            <a href="#dates" className={`nav-link ${activeSection === 'dates' ? 'active' : ''}`}>Important Dates</a>
+            <a href="#registration" className={`nav-link ${activeSection === 'registration' ? 'active' : ''}`}>Registration</a>
+            <a href="#committee" className={`nav-link ${activeSection === 'committee' ? 'active' : ''}`}>Committee</a>
+            <a href="#sponsors" className={`nav-link ${activeSection === 'sponsors' ? 'active' : ''}`}>Sponsors</a>
+            <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>Contact</a>
           </div>
-          <button className="mobile-menu-button">☰</button>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <div className="hero-section">
+      <section id="home" className="hero-section">
         <div className="container hero-content">
           <h1 className="hero-title">National Conference on</h1>
           <h2 className="hero-subtitle">"DISRUPTIVE TECHNOLOGIES IN FASHION"</h2>
           <h3 className="hero-date">19 & 20 September 2025</h3>
-          
+          <p className="hero-venue">Department of Apparel and Fashion Design<br />PSG College of Technology, Coimbatore</p>
           <div className="hero-buttons">
-            <button className="btn btn-pink">
-              DOWNLOAD BROCHURE
+            <button className="btn btn-primary" onClick={handleDownloadBrochure}>
+              Download Brochure
             </button>
-            <button className="btn btn-purple">
-              SUBMIT ABSTRACT
+            <button className="btn btn-primary" onClick={() => window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdHWy5NHK16WlyP6rrO2_hOnzTCncLNST8uhwiJpAn2gP0c0Q/viewform'}>
+              Submit Abstract
             </button>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* About Section */}
       <section id="about" className="section">
         <div className="container">
           <h2 className="section-title">About The Conference</h2>
-          
           <div className="about-grid">
-            <div>
+            <div className="about-card">
               <h3 className="subsection-title">PSG COLLEGE OF TECHNOLOGY</h3>
               <p className="text-content">
-                PSG College of Technology, an ISO 9001:2008 certified institution is one of the foremost institutions founded by PSG & Sons Charities Trust (1926). The College was established in the year 1951. The College has 15 engineering and technology departments. As a pioneer of educational innovations in the country, the college offers courses across engineering and science at Bachelors, Masters, M.Phil, MS, and Ph.D levels on full time and part-time basis.
+                PSG College of Technology, an ISO 9001:2015 certified institution, is one of the foremost institutions founded by the PSG & Sons' Charities Trust (1926). Established in 1951, the college offers a comprehensive range of academic programs including 21 Undergraduate programs (BE/BTech/BSc), 24 Postgraduate programs (ME/MTech/MSc/MBA/MCA), and research programs as a recognized QIP centre for Postgraduate and PhD programs.
               </p>
             </div>
-            
-            <div>
+            <div className="about-card">
               <h3 className="subsection-title">DEPARTMENT OF APPAREL & FASHION DESIGN</h3>
               <p className="text-content">
-                Department of Apparel and Fashion Design offers a five-year integrated M.Sc. Fashion Design and Merchandising degree, first of its kind at university level. Over the past 10 years, it has nurtured a large resource of specialists who can take the challenges of the dynamic fashion industry. The students are trained to think creatively and conscientiously.
+                The Department of Apparel and Fashion Design offers a unique five-year integrated M.Sc. Fashion Design and Merchandising degree program, pioneering at the university level. Over the past decade, it has cultivated a rich pool of specialists equipped to meet the challenges of the dynamic fashion industry. Our students are trained to think both creatively and conscientiously, preparing them for leadership roles in the fashion sector.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Conference Theme */}
-      <section className="section bg-gray">
+      {/* Theme Section */}
+      <section id="theme" className="section bg-light">
         <div className="container">
           <h2 className="section-title">Conference Theme</h2>
-          
           <div className="theme-content">
             <p className="text-content">
-              Disruptive technologies in fashion, especially those related to artificial intelligence (AI), are revolutionizing the industry by enhancing efficiency, sustainability, and innovation. These technologies influence all stages of fashion—from design to retail—transforming how brands interact with consumers and create products.
+              The fashion industry is experiencing a revolutionary transformation through disruptive technologies, particularly in artificial intelligence (AI). These innovations are reshaping every aspect of the industry, from design and production to retail and consumer interaction, while promoting efficiency, sustainability, and innovation.
             </p>
-            <p className="text-content">
-              In design, AI-driven tools like generative design software help fashion designers create innovative, customized clothing based on data trends and consumer preferences. AI also optimizes the supply chain, predicting demand more accurately, and reducing overproduction and waste.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Objectives */}
-      <section className="section">
-        <div className="container">
-          <h2 className="section-title">Objectives of the Conference</h2>
-          
-          <div className="objectives-content">
-            <ul className="objectives-list">
-              <li className="objective-item">
-                <span className="bullet">•</span>
-                <span>To discuss the impact of emerging technologies innovations that are transforming the fashion industry from AI blocks such as 3D printing and wearable technology.</span>
-              </li>
-              <li className="objective-item">
-                <span className="bullet">•</span>
-                <span>To foster collaborations by creating network opportunities for industry-professional academics.</span>
-              </li>
-              <li className="objective-item">
-                <span className="bullet">•</span>
-                <span>To discuss the aspects of the technology in various facets of the industry like Design, Production &amp; Management.</span>
-              </li>
-              <li className="objective-item">
-                <span className="bullet">•</span>
-                <span>To explore the implementation of disruptive technologies on sustainable practices reduce the environmental impact of the fashion industry.</span>
-              </li>
-            </ul>
+            <div className="theme-grid">
+              <div className="theme-card">
+                <h4>Design Innovation</h4>
+                <p>AI-driven tools and generative design software enabling fashion designers to create innovative, customized clothing based on data trends and consumer preferences.</p>
+              </div>
+              <div className="theme-card">
+                <h4>Supply Chain Optimization</h4>
+                <p>Advanced AI systems optimizing the supply chain through accurate demand prediction and waste reduction strategies.</p>
+              </div>
+              <div className="theme-card">
+                <h4>Sustainable Practices</h4>
+                <p>Integration of technology to promote sustainable fashion practices and reduce environmental impact.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Call for Papers */}
-      <section className="section bg-gray">
+      <section id="papers" className="section">
         <div className="container">
           <h2 className="section-title">Call for Papers</h2>
-          
           <div className="papers-content">
             <p className="text-content">
-              Authors are invited to submit abstracts for oral and Abstract Design with a maximum of 300 words in the following areas:
+              We invite authors to submit abstracts for oral and poster presentations, with a maximum of 300 words, in the following areas:
             </p>
-            
-            <ul className="papers-list">
-              <li className="paper-item">
-                <span className="bullet">•</span>
-                <span>3D Printing and Fashion Design</span>
-              </li>
-              <li className="paper-item">
-                <span className="bullet">•</span>
-                <span>Artificial Intelligence and Machine Learning in Fashion</span>
-              </li>
-              <li className="paper-item">
-                <span className="bullet">•</span>
-                <span>Wearable Technology and Smart Fabrics</span>
-              </li>
-              <li className="paper-item">
-                <span className="bullet">•</span>
-                <span>Blockchain and Transparency in Fashion</span>
-              </li>
-              <li className="paper-item">
-                <span className="bullet">•</span>
-                <span>Virtual and Augmented Reality in Fashion Retail</span>
-              </li>
-              <li className="paper-item">
-                <span className="bullet">•</span>
-                <span>Sustainable Fashion and Technological Innovations</span>
-              </li>
-              <li className="paper-item">
-                <span className="bullet">•</span>
-                <span>E-Commerce and Digital Transformation in Fashion</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Important Dates */}
-      <section className="section">
-        <div className="container">
-          <h2 className="section-title">Important Dates</h2>
-          
-          <div className="dates-table-container">
-            <table className="dates-table">
-              <thead className="table-header">
-                <tr>
-                  <th>Event</th>
-                  <th>Date</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="table-row">
-                  <td>Submission of Abstracts</td>
-                  <td>July 04, 2025</td>
-                </tr>
-                <tr className="table-row alt-row">
-                  <td>Acceptance of Abstracts</td>
-                  <td>July 15, 2025</td>
-                </tr>
-                <tr className="table-row">
-                  <td>Full Paper Submission</td>
-                  <td>Aug 01, 2025</td>
-                </tr>
-                <tr className="table-row alt-row">
-                  <td>Registration</td>
-                  <td>Aug 08, 2025</td>
-                </tr>
-                <tr className="table-row">
-                  <td>Last date for Registration</td>
-                  <td>Aug 22, 2025</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* Registration */}
-      <section className="section bg-gray">
-        <div className="container">
-          <h2 className="section-title">Registration</h2>
-          
-          <div className="registration-table-container">
-            <table className="registration-table">
-              <thead className="table-header">
-                <tr>
-                  <th>Category</th>
-                  <th>Early Bird (Before Aug 08)</th>
-                  <th>Regular (After Aug 08)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="table-row">
-                  <td>Industry Professionals</td>
-                  <td>₹ 5,000</td>
-                  <td>₹ 6,000</td>
-                </tr>
-                <tr className="table-row alt-row">
-                  <td>Faculty/Research Scholars</td>
-                  <td>₹ 3,000</td>
-                  <td>₹ 3,500</td>
-                </tr>
-                <tr className="table-row">
-                  <td>UG/PG Students</td>
-                  <td>₹ 1,500</td>
-                  <td>₹ 1,750</td>
-                </tr>
-              </tbody>
-            </table>
-            
-            <div className="registration-note">
-              <p className="note-title">The registration fee includes:</p>
-              <p className="note-content">Conference kit, access to all presentations, conference lunch, and refreshments. Each participant will receive conference proceedings, conference souvenir, docket and a certificate.</p>
+            <div className="papers-grid">
+              <div className="paper-topic">
+                <span className="topic-icon">🔄</span>
+                <h4>3D Printing and Fashion Design</h4>
+              </div>
+              <div className="paper-topic">
+                <span className="topic-icon">🤖</span>
+                <h4>Artificial Intelligence and Machine Learning in Fashion</h4>
+              </div>
+              <div className="paper-topic">
+                <span className="topic-icon">📱</span>
+                <h4>Wearable Technology and Smart Fabrics</h4>
+              </div>
+              <div className="paper-topic">
+                <span className="topic-icon">⛓️</span>
+                <h4>Blockchain and Transparency in Fashion</h4>
+              </div>
+              <div className="paper-topic">
+                <span className="topic-icon">🕶️</span>
+                <h4>Virtual and Augmented Reality in Fashion Retail</h4>
+              </div>
+              <div className="paper-topic">
+                <span className="topic-icon">🌱</span>
+                <h4>Sustainable Fashion and Technological Innovations</h4>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sponsorship */}
-      <section className="section">
+      {/* Important Dates */}
+      <section id="dates" className="section bg-light">
         <div className="container">
-          <h2 className="section-title">Sponsorship Opportunities</h2>
-          
-          <div className="sponsor-table-container">
-            <table className="sponsor-table">
-              <thead className="table-header">
-                <tr>
-                  <th>Type</th>
-                  <th>Amount</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="table-row">
-                  <td>Platinum Sponsor</td>
-                  <td>₹ 70,000.00</td>
-                </tr>
-                <tr className="table-row alt-row">
-                  <td>Delegate Buffet Lunch (Per Day)</td>
-                  <td>₹ 75,000.00</td>
-                </tr>
-                <tr className="table-row">
-                  <td>Delegate Badges</td>
-                  <td>₹ 10,000.00</td>
-                </tr>
-                <tr className="table-row alt-row">
-                  <td>Delegate Refreshments (Per Day)</td>
-                  <td>₹ 25,000.00</td>
-                </tr>
-                <tr className="table-row">
-                  <td>Mementoes</td>
-                  <td>₹ 25,000.00</td>
-                </tr>
-              </tbody>
-            </table>
+          <h2 className="section-title">Important Dates</h2>
+          <div className="dates-timeline">
+            <div className="timeline-item">
+              <div className="date">July 15, 2025</div>
+              <div className="date-event">Submission of Abstracts</div>
+            </div>
+            <div className="timeline-connector"></div>
+            <div className="timeline-item">
+              <div className="date">July 25, 2025</div>
+              <div className="date-event">Acceptance of Abstracts</div>
+            </div>
+            <div className="timeline-connector"></div>
+            <div className="timeline-item">
+              <div className="date">Aug 15, 2025</div>
+              <div className="date-event">Full Paper Submission</div>
+            </div>
+            <div className="timeline-connector"></div>
+            <div className="timeline-item">
+              <div className="date">Aug 18, 2025</div>
+              <div className="date-event">Registration starts on</div>
+            </div>
+            <div className="timeline-connector"></div>
+            <div className="timeline-item">
+              <div className="date">Sep 12, 2025</div>
+              <div className="date-event">Last Date for Registration</div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Contact */}
-      <section className="section bg-gray">
+      {/* Registration */}
+      <section id="registration"className="section bg-gray">
+  <div className="container">
+    <h2 className="section-title">Registration</h2>
+
+
+      {/* Registration */}
+      <div className="registration-table-container">
+      <table className="registration-table">
+        <thead className="table-header">
+          <tr>
+            <th>Category</th>
+            <th>Early Bird (Before Aug 08)</th>
+            <th>Regular (After Aug 08)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="table-row">
+            <td>Industry Professionals</td>
+            <td>₹ 5,000</td>
+            <td>₹ 6,000</td>
+          </tr>
+          <tr className="table-row alt-row">
+            <td>Faculty/Research Scholars</td>
+            <td>₹ 3,000</td>
+            <td>₹ 3,500</td>
+          </tr>
+          <tr className="table-row">
+            <td>UG/PG Students</td>
+            <td>₹ 1,500</td>
+            <td>₹ 1,750</td>
+          </tr>
+        </tbody>
+      </table>
+
+      {/* NOTE */}
+      <div className="registration-note">
+        <p className="note-title">The registration fee includes:</p>
+        <p className="note-content">
+          Conference kit, access to all presentations, conference lunch, and refreshments. Each participant will receive conference proceedings, conference souvenir, docket and a certificate.
+        </p>
+      </div>
+    </div>
+
+    {/* MODE OF PAYMENT */}
+    <div className="payment-box">
+      <h3>Mode of Payment for Registration</h3>
+      <ul>
+        <li><strong>Payment Type:</strong> Internet/Mobile Banking / GPay / Paytm</li>
+        <li><strong>Account Number:</strong> 1481267367</li>
+        <li><strong>Account Holder:</strong> PSG Centre for Non formal and Continuing Education (PSG CNCE)</li>
+        <li><strong>Bank Name:</strong> Central Bank of India</li>
+        <li><strong>Branch Name:</strong> Peelamedu</li>
+        <li><strong>IFSC Code:</strong> CBIN0280913</li>
+      </ul>
+    </div>
+    <div className="button-container">
+  <button className="register-button"  onClick={() => window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfMMF5r9pxcJ7miRCXiPGM3kiKqJzxgy4WRfS5XTh6xgkCfEQ/viewform'}>
+
+    Register Now</button>
+</div>
+
+  </div>
+</section>
+
+
+
+
+      
+
+      {/* Committee Section */}
+      <section id="committee" className="section bg-light">
+        <div className="container">
+          {/* Advisory Committee */}
+          <div className="committee-section advisory">
+            <h2 className="section-title">ADVISORY COMMITTEE</h2>
+            <div className="advisory-grid">
+              <div className="advisor-card">
+                <div className="advisor-content">
+                  <h3>Dr. Kaustav SenGupta</h3>
+                  <div className="advisor-role">Associate Professor, Centre Coordinator and Chairperson I/C- NIFT Campus, Chennai.</div>
+                </div>
+              </div>
+              <div className="advisor-card">
+                <div className="advisor-content">
+                  <h3>Dr. Deepa Chandran</h3>
+                  <div className="advisor-role">Sustainability Head - Lifestyle Brands, Aditya Birla Fashion & Retail Limited, Bengaluru</div>
+                </div>
+              </div>
+              <div className="advisor-card">
+                <div className="advisor-content">
+                  <h3>Mr. Dharmender Khanna</h3>
+                  <div className="advisor-role">Head of Brand and Digital Transformation SSIPL Retail Limited, Haryana.</div>
+            </div>
+            </div>
+              <div className="advisor-card">
+                <div className="advisor-content">
+                  <h3>Mr. D. M. Kumar</h3>
+                  <div className="advisor-role">CEO, M/s Eastern Global Clothing, Tiruppur.</div>
+            </div>
+          </div>
+              <div className="advisor-card">
+                <div className="advisor-content">
+                  <h3>Mr. Shashank Johri</h3>
+                  <div className="advisor-role">Research and Design - UX Design for Sustainability, A Bunch of Designers (ABOD), Founder, Bengaluru.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Organizing Committee */}
+          <div className="committee-section organizing">
+            <h2 className="section-title">ORGANIZING COMMITTEE</h2>
+            <div className="org-compact">
+              <div className="org-row">
+                <div className="org-member">
+                  <div className="member-role">Patron</div>
+                  <div className="member-info">
+                    <h3>Shri L. Gopalakrishnan</h3>
+                    <p>Managing Trustee, PSG & Sons' Charities, Coimbatore</p>
+                  </div>
+                </div>
+                <div className="org-member">
+                  <div className="member-role">Chairman</div>
+                  <div className="member-info">
+                    <h3>Dr. K. Prakasan</h3>
+                    <p>Principal, PSG College of Technology, Coimbatore</p>
+                  </div>
+                </div>
+              </div>
+              <div className="org-row">
+                <div className="org-member">
+                  <div className="member-role">Convener</div>
+                  <div className="member-info">
+                    <h3>Dr. D. Vijayalakshmi</h3>
+                    <p>Professor & Head, Department of Apparel & Fashion Design, PSG College of Technology, Coimbatore</p>
+                  </div>
+                </div>
+                <div className="org-member">
+                  <div className="member-role">Organizing Secretaries</div>
+                  <div className="member-info">
+                    <div className="secretary-group">
+                      <h3>Dr. Nirmala Varghese</h3>
+                      <h3>Dr. Mariyam Adnan</h3>
+                      <p>Associate Professors, Department of Apparel & Fashion Design, PSG College of Technology, Coimbatore</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sponsors Section */}
+      <section id="sponsors" className="section">
+        <div className="container">
+          <h2 className="section-title">Sponsorship Opportunities</h2>
+          <div className="sponsor-cards">
+            <div className="sponsor-card platinum">
+              <div className="sponsor-badge">Platinum</div>
+              <div className="sponsor-amount">₹70,000</div>
+              <div className="sponsor-benefits">
+                      <ul>
+                        <li>Logo placement on all conference materials</li>
+                        <li>Exhibition space at prime location</li>
+                        <li>4 complimentary registrations</li>
+                      </ul>
+              </div>
+            </div>
+
+            <div className="sponsor-card gold">
+              <div className="sponsor-badge">Gold</div>
+              <div className="sponsor-amount">₹50,000</div>
+              <div className="sponsor-benefits">
+                      <ul>
+                        <li>Logo placement on conference website</li>
+                        <li>Exhibition space</li>
+                        <li>2 complimentary registrations</li>
+                      </ul>
+              </div>
+            </div>
+
+            <div className="sponsor-card special lunch">
+              <div className="sponsor-badge">Lunch Sponsor</div>
+              <div className="sponsor-amount">₹75,000</div>
+              <div className="sponsor-subtitle">Per Day</div>
+              <div className="sponsor-benefits">
+                      <ul>
+                        <li>Banner display at lunch area</li>
+                        <li>Special mention during lunch</li>
+                        <li>2 complimentary registrations</li>
+                      </ul>
+              </div>
+            </div>
+
+            <div className="sponsor-card kit">
+              <div className="sponsor-badge">Delegate Kit</div>
+              <div className="sponsor-amount">₹30,000</div>
+              <div className="sponsor-benefits">
+                <ul>
+                  <li>Logo on delegate kits</li>
+                  <li>1 complimentary registration</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="sponsor-card special refreshments">
+              <div className="sponsor-badge">Refreshments</div>
+              <div className="sponsor-amount">₹25,000</div>
+              <div className="sponsor-subtitle">Per Day</div>
+              <div className="sponsor-benefits">
+                      <ul>
+                        <li>Banner display at refreshment area</li>
+                        <li>1 complimentary registration</li>
+                      </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="section bg-light">
         <div className="container">
           <h2 className="section-title">Contact Us</h2>
-          
-          <div className="contact-container">
+          <div className="contact-grid">
             <div className="contact-card">
-              <p className="contact-info"><strong>Accommodation:</strong> Can be arranged in College Guest house and College Hostel available on chargeable basis.</p>
-              <p className="contact-info"><strong>Phone:</strong> +91 4225692392, +91 9940224083</p>
-              <p className="contact-info"><strong>E-mail:</strong> ncdtf25_afd@psgtech.ac.in</p>
-              
-              <div className="committee-info">
-                <h3 className="committee-title">Organizing Committee</h3>
-                <p><strong>Chief Patron:</strong> Shri L. Gopalakrishnan</p>
-                <p><strong>Patron:</strong> Dr. P. Prakash</p>
-                <p><strong>Convener:</strong> Dr. D. Vijayalakshmi</p>
-                <p><strong>Organizing Secretaries:</strong> Dr. Nirmala Varghese, Dr. Mariyam Adnan</p>
+              <h3>Conference Secretariat</h3>
+              <p>Department of Apparel and Fashion Design</p>
+              <p>PSG College of Technology</p>
+              <p>Coimbatore - 641004</p>
+              <p>Tamil Nadu, India</p>
+              <p>Email: ncdtf2025@psgtech.ac.in</p>
+              <p>Phone: +91-422-2572177</p>
+            </div>
+            <div className="contact-card">
+              <h3>For Queries</h3>
+              <div className="contact-person">
+                <p><strong>Dr. K. Sangeetha</strong></p>
+                <p>Associate Professor & Head</p>
+                <p>Department of Apparel and Fashion Design</p>
+                <p>Mobile: +91-9942211177</p>
               </div>
             </div>
           </div>
@@ -297,13 +426,17 @@ const FashionTechConference = () => {
 
       {/* Footer */}
       <footer className="footer">
-        <div className="container footer-content">
-          <p className="footer-text">Organized by</p>
-          <p className="footer-department">Department of Apparel & Fashion Design</p>
-          <p className="footer-college">PSG College of Technology, Coimbatore - 04</p>
-          
-          <div className="footer-copyright">
-            <p>© 2025 NCDTF. All Rights Reserved.</p>
+        <div className="container">
+          <div className="footer-content">
+            <div className="footer-logo">NCDTF 2025</div>
+            <div className="footer-info">
+              <p>Department of Apparel and Fashion Design</p>
+              <p>PSG College of Technology</p>
+              <p>Coimbatore - 641004, Tamil Nadu, India</p>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <p>&copy; 2025 NCDTF. All rights reserved.</p>
           </div>
         </div>
       </footer>
