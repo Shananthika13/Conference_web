@@ -148,22 +148,22 @@ const FashionTechConference = () => {
           <h2 className="section-title">Important Dates</h2>
           <div className="dates-timeline">
             <div className="timeline-item">
-              <div className="date">July 15, 2025</div>
+              <div className="date">July 30, 2025</div>
               <div className="date-event">Submission of Abstracts</div>
             </div>
             <div className="timeline-connector"></div>
             <div className="timeline-item">
-              <div className="date">July 25, 2025</div>
+              <div className="date">Aug 10, 2025</div>
               <div className="date-event">Acceptance of Abstracts</div>
             </div>
             <div className="timeline-connector"></div>
             <div className="timeline-item">
-              <div className="date">Aug 15, 2025</div>
+              <div className="date">Aug 25, 2025</div>
               <div className="date-event">Full Paper Submission</div>
             </div>
             <div className="timeline-connector"></div>
             <div className="timeline-item">
-              <div className="date">Aug 18, 2025</div>
+              <div className="date">Sep 01, 2025</div>
               <div className="date-event">Registration starts on</div>
             </div>
             <div className="timeline-connector"></div>
