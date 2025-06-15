@@ -417,15 +417,7 @@ const FashionTechConference = () => {
               <p>Email: ncdtf2025@psgtech.ac.in</p>
               <p>Phone: +91-422-2572177</p>
             </div>
-            <div className="contact-card">
-              <h3>For Queries</h3>
-              <div className="contact-person">
-                <p><strong>Dr. K. Sangeetha</strong></p>
-                <p>Associate Professor & Head</p>
-                <p>Department of Apparel and Fashion Design</p>
-                <p>Mobile: +91-9942211177</p>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>
