@@ -214,25 +214,25 @@ const FashionTechConference = () => {
         <thead className="table-header">
           <tr>
             <th>Category</th>
-            <th>Early Bird (Before Aug 08)</th>
-            <th>Regular (After Aug 08)</th>
+            <th>Fees(INR)</th>
+            
           </tr>
         </thead>
         <tbody>
           <tr className="table-row">
             <td>Industry Professionals</td>
             <td>₹ 5,000</td>
-            <td>₹ 6,000</td>
+            
           </tr>
           <tr className="table-row alt-row">
             <td>Faculty/Research Scholars</td>
             <td>₹ 3,000</td>
-            <td>₹ 3,500</td>
+            
           </tr>
           <tr className="table-row">
             <td>UG/PG Students</td>
             <td>₹ 1,500</td>
-            <td>₹ 1,750</td>
+            
           </tr>
         </tbody>
       </table>
@@ -242,6 +242,8 @@ const FashionTechConference = () => {
         <p className="note-title">The registration fee includes:</p>
         <p className="note-content">
           Conference kit, access to all presentations, conference lunch, and refreshments. Each participant will receive conference proceedings, conference souvenir, docket and a certificate.
+          
+          <p><b>*Fee includes 18% GST</b></p>
         </p>
       </div>
     </div>
