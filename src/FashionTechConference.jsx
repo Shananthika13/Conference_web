@@ -259,13 +259,10 @@ const FashionTechConference = () => {
         <li><strong>Branch Name:</strong> Peelamedu</li>
         <li><strong>IFSC Code:</strong> CBIN0280913</li>
       </ul>
-    </div>
-    {/* Accommodation Info Box above Register Now */}
-    <div className="accommodation-box">
-      Accommodation can be arranged in College Guest House and College Hostel on a chargeable basis.
+      <p className="accommodation-info">Accommodation can be arranged in College Guest House and College Hostel on a chargeable basis.</p>
     </div>
     <div className="button-container">
-      <button className="register-button btn btn-primary-yellow"  onClick={() => window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfMMF5r9pxcJ7miRCXiPGM3kiKqJzxgy4WRfS5XTh6xgkCfEQ/viewform'}>
+      <button className="register-button btn btn-primary-yellow" onClick={() => window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfMMF5r9pxcJ7miRCXiPGM3kiKqJzxgy4WRfS5XTh6xgkCfEQ/viewform'}>
         Register Now
       </button>
     </div>
