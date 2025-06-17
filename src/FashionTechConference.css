@@ -2844,3 +2844,6 @@ body::before {
   text-align: center;
   font-weight: 600;
 }
+.hero-buttons .btn {
+  color: white !important;
+}
