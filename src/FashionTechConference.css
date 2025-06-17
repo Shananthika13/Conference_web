@@ -2835,3 +2835,12 @@ body::before {
     font-size: 0.9rem;
   }
 }
+
+.accommodation-info {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #2a1d0e;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: 600;
+}
