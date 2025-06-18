@@ -1109,7 +1109,7 @@ body::before {
 .advisor-card {
   flex: 0 1 calc(33.333% - 1.35rem);
   min-width: 300px;
-  background: linear-gradient(135deg, #ffefd5 0%, #fdf5e6 50%, #ffe4c4 100%);
+  background: linear-gradient(135deg, #fff7f0 0%, #fffaf5 50%, #fff3e6 100%);
   border-radius: 8px;
   padding: 2.5rem;
   position: relative;
