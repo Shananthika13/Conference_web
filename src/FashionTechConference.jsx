@@ -42,11 +42,13 @@ const FashionTechConference = () => {
       {/* Hero Section */}
       <section id="home" className="hero-section">
         <div className="container hero-content">
-          <h1 className="hero-title">National Conference on</h1>
-          <h2 className="hero-subtitle">"DISRUPTIVE TECHNOLOGIES IN FASHION"</h2>
-          <h3 className="hero-date">19 & 20 September 2025</h3>
-          <p className="hero-venue">Department of Apparel and Fashion Design<br />PSG College of Technology, Coimbatore</p>
-          <div className="hero-buttons">
+          <div className="hero-title-group fade-in-up-0">
+            <h1 className="hero-title">National Conference on</h1>
+            <h2 className="hero-subtitle">"DISRUPTIVE TECHNOLOGIES IN FASHION"</h2>
+          </div>
+          <h3 className="hero-date fade-in-up-1">19 & 20 September 2025</h3>
+          <p className="hero-venue fade-in-up-2">Department of Apparel and Fashion Design<br />PSG College of Technology, Coimbatore</p>
+          <div className="hero-buttons fade-in-up-3">
             <button className="btn-primary" onClick={handleDownloadBrochure}>
               Download Brochure
             </button>
@@ -469,19 +471,9 @@ const FashionTechConference = () => {
             <div className="brand-tagline">Disruptive Technologies in Fashion</div>
           </div>
           <p className="brand-description">
-            Join us for an innovative conference exploring how AI, 3D printing, 
-            and emerging technologies are revolutionizing the fashion industry.
+            Where fashion meets the future: Experience innovation, inspiration, and the next wave of style at NCDTF 2025.
           </p>
-          <div className="social-icons">
-            <a href="#" className="social-icon" data-platform="twitter">
-              <i className="fab fa-twitter"></i>
-              <span className="tooltip">Twitter</span>
-            </a>
-            <a href="#" className="social-icon" data-platform="linkedin">
-              <i className="fab fa-linkedin-in"></i>
-              <span className="tooltip">LinkedIn</span>
-            </a>
-          </div>
+          
         </div>
         
         <div className="footer-links">
@@ -490,8 +482,8 @@ const FashionTechConference = () => {
             <ul>
               <li><a href="#home"><i className="fas fa-home"></i> Home</a></li>
               <li><a href="#about"><i className="fas fa-info-circle"></i> About</a></li>
-              <li><a href="#speakers"><i className="fas fa-microphone"></i> Speakers</a></li>
-              <li><a href="#schedule"><i className="fas fa-calendar"></i> Schedule</a></li>
+              <li><a href="#theme"><i className="fas fa-microphone"></i> Themes</a></li>
+              <li><a href="#papers"><i className="fas fa-calendar"></i> Papers</a></li>
             </ul>
           </div>
           
@@ -500,7 +492,7 @@ const FashionTechConference = () => {
             <ul>
               <li><a href="#registration"><i className="fas fa-ticket-alt"></i> Registration</a></li>
               <li><a href="#sponsors"><i className="fas fa-handshake"></i> Sponsors</a></li>
-              <li><a href="#gallery"><i className="fas fa-images"></i> Gallery</a></li>
+              <li><a href="#committee"><i className="fas fa-images"></i>Committee </a></li>
               <li><a href="#contact"><i className="fas fa-envelope"></i> Contact</a></li>
             </ul>
           </div>
