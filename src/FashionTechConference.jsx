@@ -89,7 +89,7 @@ const FashionTechConference = () => {
     <h2 className="section-title">Conference Theme</h2>
     <div className="theme-content">
       <p className="text-content">
-        The conference on <strong>Disruptive Technologies in Fashion – NCDTF 25</strong> explores the transformative impact in the Fashion Industry. From AI-driven trend forecasting and sustainable materials to blockchain for transparency and 3D printing for on-demand production, these innovations are reshaping design, manufacturing, and consumer experiences. Wearable tech and augmented reality are further revolutionizing how fashion is consumed and interacted with. Industry leaders will discuss how these technologies drive efficiency, sustainability, and personalization, and explore their potential to redefine the future of fashion in an increasingly digital and eco-conscious world.
+      The conference on <strong>Disruptive Technologies in Fashion – NCDTF 25</strong> explores how innovations like AI-driven trend forecasting, sustainable materials, blockchain, and 3D printing are transforming the fashion industry. From design to consumer experiences, technologies such as wearables and AR are driving efficiency, sustainability, and personalization in a digital, eco-conscious world.
       </p>
       <div className="theme-grid">
         <div className="theme-card">
@@ -454,13 +454,13 @@ const FashionTechConference = () => {
       <div className="modern-pricing-grid">
         <div className="pricing-category stalls">
           <div className="category-header">
-            <h3>Exhibition Stalls 🎪</h3>
+            <h3>Exhibition Stalls</h3>
             
           </div>
           <div className="stall-showcase">
             <div className="stall-card standard">
               <div className="stall-visual">
-                <div className="stall-icon">📍</div>
+                
                 <div className="stall-size">9 × 9</div>
                 <div className="stall-unit">feet</div>
               </div>
@@ -472,7 +472,7 @@ const FashionTechConference = () => {
             
             <div className="stall-card premium">
               <div className="stall-visual">
-                <div className="stall-icon">⭐</div>
+                
                 <div className="stall-size">18 × 18</div>
                 <div className="stall-unit">feet</div>
               </div>
@@ -487,7 +487,7 @@ const FashionTechConference = () => {
         {/* Souvenir Advertisement */}
         <div className="pricing-category souvenir">
           <div className="category-header">
-            <h3>Souvenir Advertisement 📖</h3>
+            <h3>Souvenir Advertisement</h3>
             
           </div>
           <div className="modern-cards souvenir-cards">
@@ -664,8 +664,8 @@ const FashionTechConference = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-content">
           <div className="copyright">
-            <p>&copy; 2025 NCDTF - National Conference on Disruptive Technologies in Fashion</p>
-            <p>Organized by <strong>Department of Apparel & Fashion Design, PSG College of Technology</strong></p>
+            <p>&copy; 2025 NCDTF - National Conference on Disruptive Technologies in Fashion. All rights reserved</p>
+           
           </div>
         </div>
       </div>
