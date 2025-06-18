@@ -2494,3 +2494,16 @@ body::before {
   background: linear-gradient(135deg, rgba(193, 154, 107, 0.15), rgba(218, 165, 32, 0.15));
 }
 
+
+
+
+.stall-showcase {
+  display: flex;
+  justify-content: space-around; /* equal spacing on left, right, and between */
+  align-items: center;
+  flex-wrap: wrap; /* optional: allows wrapping on smaller screens */
+  width: 100%;
+  flex-direction:row;
+  margin-top: 2rem;
+}
+

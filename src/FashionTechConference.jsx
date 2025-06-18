@@ -85,29 +85,30 @@ const FashionTechConference = () => {
 
       {/* Theme Section */}
       <section id="theme" className="section bg-light">
-        <div className="container">
-          <h2 className="section-title">Conference Theme</h2>
-          <div className="theme-content">
-            <p className="text-content">
-              The fashion industry is experiencing a revolutionary transformation through disruptive technologies, particularly in artificial intelligence (AI). These innovations are reshaping every aspect of the industry, from design and production to retail and consumer interaction, while promoting efficiency, sustainability, and innovation.
-            </p>
-            <div className="theme-grid">
-              <div className="theme-card">
-                <h4>Design Innovation</h4>
-                <p>AI-driven tools and generative design software enabling fashion designers to create innovative, customized clothing based on data trends and consumer preferences.</p>
-              </div>
-              <div className="theme-card">
-                <h4>Supply Chain Optimization</h4>
-                <p>Advanced AI systems optimizing the supply chain through accurate demand prediction and waste reduction strategies.</p>
-              </div>
-              <div className="theme-card">
-                <h4>Sustainable Practices</h4>
-                <p>Integration of technology to promote sustainable fashion practices and reduce environmental impact.</p>
-              </div>
-            </div>
-          </div>
+  <div className="container">
+    <h2 className="section-title">Conference Theme</h2>
+    <div className="theme-content">
+      <p className="text-content">
+        The conference on <strong>Disruptive Technologies in Fashion – NCDTF 25</strong> explores the transformative impact in the Fashion Industry. From AI-driven trend forecasting and sustainable materials to blockchain for transparency and 3D printing for on-demand production, these innovations are reshaping design, manufacturing, and consumer experiences. Wearable tech and augmented reality are further revolutionizing how fashion is consumed and interacted with. Industry leaders will discuss how these technologies drive efficiency, sustainability, and personalization, and explore their potential to redefine the future of fashion in an increasingly digital and eco-conscious world.
+      </p>
+      <div className="theme-grid">
+        <div className="theme-card">
+          <h4>AI & Trend Forecasting</h4>
+          <p>AI-driven insights are enabling accurate forecasting of fashion trends, helping designers stay ahead and meet consumer demand effectively.</p>
         </div>
-      </section>
+        <div className="theme-card">
+          <h4>Blockchain & 3D Printing</h4>
+          <p>Blockchain enhances transparency in the supply chain, while 3D printing supports on-demand, waste-reducing production models.</p>
+        </div>
+        <div className="theme-card">
+          <h4>Wearables & AR</h4>
+          <p>Wearable technology and augmented reality are transforming how consumers experience and interact with fashion, blending digital and physical worlds.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Call for Papers */}
       <section id="papers" className="section">
