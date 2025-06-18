@@ -347,6 +347,7 @@ body::before {
   background: linear-gradient(135deg, var(--primary-brown) 0%, var(--secondary-brown) 100%);
   box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
   border: 2px solid transparent;
+
 }
 
 .btn-primary:hover {

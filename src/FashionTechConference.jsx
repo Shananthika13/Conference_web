@@ -47,13 +47,13 @@ const FashionTechConference = () => {
           <h3 className="hero-date">19 & 20 September 2025</h3>
           <p className="hero-venue">Department of Apparel and Fashion Design<br />PSG College of Technology, Coimbatore</p>
           <div className="hero-buttons">
-            <button className="btn btn-primary" onClick={handleDownloadBrochure}>
+            <button className="btn-primary" onClick={handleDownloadBrochure}>
               Download Brochure
             </button>
-            <button className="btn btn-primary" onClick={() => window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdHWy5NHK16WlyP6rrO2_hOnzTCncLNST8uhwiJpAn2gP0c0Q/viewform'}>
+            <button className="btn-primary" onClick={() => window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdHWy5NHK16WlyP6rrO2_hOnzTCncLNST8uhwiJpAn2gP0c0Q/viewform'}>
               Submit Abstract
             </button>
-            <button className="btn btn-primary" onClick={() => window.location.href = 'https://docs.google.com/document/d/1g6wtTWJL1f1S00SyNtLgsqa5KkEAbAQw/edit?usp=sharing&ouid=116410768831522929067&rtpof=true&sd=true'}>
+            <button className="btn-primary" onClick={() => window.location.href = 'https://docs.google.com/document/d/1g6wtTWJL1f1S00SyNtLgsqa5KkEAbAQw/edit?usp=sharing&ouid=116410768831522929067&rtpof=true&sd=true'}>
               Abstract Template
             </button>
           </div>
@@ -175,22 +175,22 @@ const FashionTechConference = () => {
           <h2 className="section-title">Important Dates</h2>
           <div className="dates-timeline">
             <div className="timeline-item">
-              <div className="date">July 15, 2025</div>
+              <div className="date">July 30, 2025</div>
               <div className="date-event">Submission of Abstracts</div>
             </div>
             <div className="timeline-connector"></div>
             <div className="timeline-item">
-              <div className="date">July 25, 2025</div>
+              <div className="date">Aug 10, 2025</div>
               <div className="date-event">Acceptance of Abstracts</div>
             </div>
             <div className="timeline-connector"></div>
             <div className="timeline-item">
-              <div className="date">Aug 15, 2025</div>
+              <div className="date">Aug 25, 2025</div>
               <div className="date-event">Full Paper Submission</div>
             </div>
             <div className="timeline-connector"></div>
             <div className="timeline-item">
-              <div className="date">Aug 18, 2025</div>
+              <div className="date">Sep 01, 2025</div>
               <div className="date-event">Registration starts on</div>
             </div>
             <div className="timeline-connector"></div>
