@@ -363,6 +363,8 @@ const FashionTechConference = () => {
       <div className="sponsor-info-text visually-appealing-bg">
         NCDTF 25 offers retailers and manufacturers a unique platform to showcase products, present to a focused audience, and advertise in a widely distributed conference souvenir.
       </div>
+      
+      {/* Existing sponsor cards */}
       <div className="sponsor-cards">
         <div className="sponsor-card platinum">
           <div className="sponsor-badge">Platinum</div>
@@ -443,6 +445,129 @@ const FashionTechConference = () => {
               <li>1 complimentary Delegate Pass</li>
               <li>Quarter page color in Souvenir</li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Exhibition Stalls */}
+      <div className="modern-pricing-grid">
+        <div className="pricing-category stalls">
+          <div className="category-header">
+            <h3>Exhibition Stalls 🎪</h3>
+            
+          </div>
+          <div className="stall-showcase">
+            <div className="stall-card standard">
+              <div className="stall-visual">
+                <div className="stall-icon">📍</div>
+                <div className="stall-size">9 × 9</div>
+                <div className="stall-unit">feet</div>
+              </div>
+              <div className="stall-info">
+                <div className="stall-type">Standard Stall</div>
+                <div className="stall-price">₹25,000.00</div>
+              </div>
+            </div>
+            
+            <div className="stall-card premium">
+              <div className="stall-visual">
+                <div className="stall-icon">⭐</div>
+                <div className="stall-size">18 × 18</div>
+                <div className="stall-unit">feet</div>
+              </div>
+              <div className="stall-info">
+                <div className="stall-type">Premium Stall</div>
+                <div className="stall-price">₹50,000.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Souvenir Advertisement */}
+        <div className="pricing-category souvenir">
+          <div className="category-header">
+            <h3>Souvenir Advertisement 📖</h3>
+            
+          </div>
+          <div className="modern-cards souvenir-cards">
+            <div className="modern-card featured">
+              <div className="card-accent"></div>
+              <div className="card-content">
+                <div className="ad-badge">Premium Position</div>
+                <div className="ad-type">Front Cover Inner</div>
+                <div className="ad-specs">Full Page (Colour)</div>
+                <div className="price">₹25,000.00</div>
+              </div>
+            </div>
+            <div className="modern-card featured">
+              <div className="card-accent"></div>
+              <div className="card-content">
+                <div className="ad-badge">Premium Position</div>
+                <div className="ad-type">Back Cover Outside</div>
+                <div className="ad-specs">Full Page (Colour)</div>
+                <div className="price">₹25,000.00</div>
+              </div>
+            </div>
+            <div className="modern-card featured">
+              <div className="card-accent"></div>
+              <div className="card-content">
+                <div className="ad-badge">Premium Position</div>
+                <div className="ad-type">Back Cover Inner</div>
+                <div className="ad-specs">Full Page (Colour)</div>
+                <div className="price">₹20,000.00</div>
+              </div>
+            </div>
+            <div className="modern-card">
+              <div className="card-accent"></div>
+              <div className="card-content">
+                <div className="ad-type">Regular Page</div>
+                <div className="ad-specs">Full Page (Colour)</div>
+                <div className="price">₹15,000.00</div>
+              </div>
+            </div>
+
+            <div className="modern-card">
+              <div className="card-accent"></div>
+              <div className="card-content">
+                <div className="ad-type">Regular Page</div>
+                <div className="ad-specs">Full Page (Black nd White)</div>
+                <div className="price">₹10,000.00</div>
+              </div>
+            </div>
+
+
+            <div className="modern-card half">
+              <div className="card-accent"></div>
+              <div className="card-content">
+                <div className="ad-type">Half Page</div>
+                <div className="ad-specs">Colour</div>
+                <div className="price">₹8,000.00</div>
+              </div>
+            </div>
+            <div className="modern-card half">
+              <div className="card-accent"></div>
+              <div className="card-content">
+                <div className="ad-type">Half Page</div>
+                <div className="ad-specs">Black & White</div>
+                <div className="price">₹7,000.00</div>
+              </div>
+            </div>
+            <div className="modern-card quarter">
+              <div className="card-accent"></div>
+              <div className="card-content">
+                <div className="ad-type">Quarter Page</div>
+                <div className="ad-specs">Colour</div>
+                <div className="price">₹5,000.00</div>
+              </div>
+            </div>
+            <div className="modern-card quarter">
+              <div className="card-accent"></div>
+              <div className="card-content">
+                <div className="ad-type">Quarter Page</div>
+                <div className="ad-specs">Black & White</div>
+                <div className="price">₹4,000.00</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
