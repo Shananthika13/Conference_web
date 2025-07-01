@@ -19,6 +19,20 @@ const FashionTechConference = () => {
     window.open(brochurePDF, '_blank');
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <div className="conference-container">
       {/* Navigation Bar */}
@@ -28,11 +42,11 @@ const FashionTechConference = () => {
           <div className="nav-links">
             <a href="#home" className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>Home</a>
             <a href="#about" className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}>About</a>
+            <a href="#committee" className={`nav-link ${activeSection === 'committee' ? 'active' : ''}`}>Committee</a>
             <a href="#theme" className={`nav-link ${activeSection === 'theme' ? 'active' : ''}`}>Theme</a>
             <a href="#papers" className={`nav-link ${activeSection === 'papers' ? 'active' : ''}`}>Call for Papers</a>
             <a href="#dates" className={`nav-link ${activeSection === 'dates' ? 'active' : ''}`}>Important Dates</a>
             <a href="#registration" className={`nav-link ${activeSection === 'registration' ? 'active' : ''}`}>Registration</a>
-            <a href="#committee" className={`nav-link ${activeSection === 'committee' ? 'active' : ''}`}>Committee</a>
             <a href="#sponsors" className={`nav-link ${activeSection === 'sponsors' ? 'active' : ''}`}>Sponsors</a>
             <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>Contact</a>
           </div>
@@ -583,6 +597,16 @@ const FashionTechConference = () => {
 
   {/* Modern Interactive Footer */}
   <footer className="modern-footer">
+    {/* Scroll Buttons */}
+    <div className="scroll-buttons">
+      <button className="scroll-button up" onClick={scrollToTop} aria-label="Scroll to top">
+        <i className="fas fa-chevron-up"></i>
+      </button>
+      <button className="scroll-button down" onClick={scrollToBottom} aria-label="Scroll to bottom">
+        <i className="fas fa-chevron-down"></i>
+      </button>
+    </div>
+    
     <div className="footer-waves">
       <div className="wave wave1"></div>
       <div className="wave wave2"></div>

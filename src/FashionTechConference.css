@@ -2760,3 +2760,64 @@ body::before {
   margin-bottom: 0.5rem;
 }
 
+/* Scroll Buttons */
+.scroll-buttons {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 1000;
+}
+
+.scroll-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-brown), var(--secondary-brown));
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.2);
+}
+
+.scroll-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 69, 19, 0.3);
+  background: linear-gradient(135deg, var(--secondary-brown), var(--accent-brown));
+}
+
+.scroll-button i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.scroll-button.up:hover i {
+  transform: translateY(-2px);
+}
+
+.scroll-button.down:hover i {
+  transform: translateY(2px);
+}
+
+@media (max-width: 768px) {
+  .scroll-buttons {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .scroll-button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .scroll-button i {
+    font-size: 1rem;
+  }
+}
+
