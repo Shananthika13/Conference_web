@@ -5,6 +5,7 @@ import brochurePDF from './assets/documents/Final Brochure design.pdf';
 const FashionTechConference = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +18,14 @@ const FashionTechConference = () => {
 
   const handleDownloadBrochure = () => {
     window.open(brochurePDF, '_blank');
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleNavLinkClick = () => {
+    setIsMobileMenuOpen(false); // Close mobile menu when a link is clicked
   };
 
   const scrollToTop = () => {
@@ -37,18 +46,24 @@ const FashionTechConference = () => {
     <div className="conference-container">
       {/* Navigation Bar */}
       <nav className={`nav-bar ${isScrolled ? 'scrolled' : ''}`}>
+          <div className="nav-brand">
+            <img src="/psg_logo.png" alt="PSG Logo" className="nav-logo" />
+            <div className="conference-name">NCDTF 2025</div>
+          </div>
         <div className="container nav-container">
-          <div className="conference-logo">NCDTF 2025</div>
-          <div className="nav-links">
-            <a href="#home" className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>Home</a>
-            <a href="#about" className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}>About</a>
-            <a href="#committee" className={`nav-link ${activeSection === 'committee' ? 'active' : ''}`}>Committee</a>
-            <a href="#theme" className={`nav-link ${activeSection === 'theme' ? 'active' : ''}`}>Theme</a>
-            <a href="#papers" className={`nav-link ${activeSection === 'papers' ? 'active' : ''}`}>Call for Papers</a>
-            <a href="#dates" className={`nav-link ${activeSection === 'dates' ? 'active' : ''}`}>Important Dates</a>
-            <a href="#registration" className={`nav-link ${activeSection === 'registration' ? 'active' : ''}`}>Registration</a>
-            <a href="#sponsors" className={`nav-link ${activeSection === 'sponsors' ? 'active' : ''}`}>Sponsors</a>
-            <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>Contact</a>
+          <button className="mobile-menu-button" onClick={toggleMobileMenu}>
+            {isMobileMenuOpen ? '✕' : '☰'}
+          </button>
+          <div className={`nav-links ${isMobileMenuOpen ? 'mobile-active' : ''}`}>
+            <a href="#home" onClick={handleNavLinkClick} className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>Home</a>
+            <a href="#about" onClick={handleNavLinkClick} className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}>About</a>
+            <a href="#committee" onClick={handleNavLinkClick} className={`nav-link ${activeSection === 'committee' ? 'active' : ''}`}>Committee</a>
+            <a href="#theme" onClick={handleNavLinkClick} className={`nav-link ${activeSection === 'theme' ? 'active' : ''}`}>Theme</a>
+            <a href="#papers" onClick={handleNavLinkClick} className={`nav-link ${activeSection === 'papers' ? 'active' : ''}`}>Call for Papers</a>
+            <a href="#dates" onClick={handleNavLinkClick} className={`nav-link ${activeSection === 'dates' ? 'active' : ''}`}>Important Dates</a>
+            <a href="#registration" onClick={handleNavLinkClick} className={`nav-link ${activeSection === 'registration' ? 'active' : ''}`}>Registration</a>
+            <a href="#sponsors" onClick={handleNavLinkClick} className={`nav-link ${activeSection === 'sponsors' ? 'active' : ''}`}>Sponsors</a>
+            <a href="#contact" onClick={handleNavLinkClick} className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>Contact</a>
           </div>
         </div>
       </nav>
