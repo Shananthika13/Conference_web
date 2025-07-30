@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './FashionTechConference.css';
-import brochurePDF from './assets/documents/Final Brochure design.pdf';
+import brochurePDF from './assets/documents/Final_Brochure1.pdf';
 
 const FashionTechConference = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,7 +48,7 @@ const FashionTechConference = () => {
       <nav className={`nav-bar ${isScrolled ? 'scrolled' : ''}`}>
           <div className="nav-brand">
             <img src="/psg_logo.png" alt="PSG Logo" className="nav-logo" />
-            <div className="conference-name">NCDTF 2025</div>
+            <div className="conference-name">NCDTF 2026</div>
           </div>
         <div className="container nav-container">
           <button className="mobile-menu-button" onClick={toggleMobileMenu}>
@@ -75,7 +75,7 @@ const FashionTechConference = () => {
             <h1 className="hero-title">National Conference on</h1>
             <h2 className="hero-subtitle">"DISRUPTIVE TECHNOLOGIES IN FASHION"</h2>
           </div>
-          <h3 className="hero-date fade-in-up-1">19 & 20 September 2025</h3>
+          <h3 className="hero-date fade-in-up-1">30 & 31 January 2026</h3>
           <p className="hero-venue fade-in-up-2">Department of Apparel and Fashion Design<br />PSG College of Technology, Coimbatore</p>
           <div className="hero-buttons fade-in-up-3">
             <button className="btn-primary" onClick={handleDownloadBrochure}>
