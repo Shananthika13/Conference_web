@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './FashionTechConference.css';
-import brochurePDF from './assets/documents/Final_Brochure1.pdf';
+import brochurePDF from './assets/documents/Brochure.pdf';
 
 const FashionTechConference = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -99,39 +99,111 @@ const FashionTechConference = () => {
             <div className="about-card">
               <h3 className="subsection-title">PSG COLLEGE OF TECHNOLOGY</h3>
               <p className="text-content">
-                PSG College of Technology, an ISO 9001:2015 certified institution, is one of the foremost institutions founded by the PSG & Sons' Charities Trust (1926). Established in 1951, the college offers a comprehensive range of academic programs including 21 Undergraduate programs (BE/BTech/BSc), 24 Postgraduate programs (ME/MTech/MSc/MBA/MCA), and research programs as a recognized QIP centre for Postgraduate and PhD programs.
-              </p>
+                PSG College of Technology, established in 1951, is one of the premier institutions in India, founded by
+the PSG & Sons' Charities Trust, which dates back to 1926. An ISO 9001:2015 certified institution,
+the college is renowned for its academic excellence and commitment to quality education. It offers
+wide range of programmes including 21 undergraduate courses such as BE, BTech, and BSc, and 24
+postgraduate programmes encompassing ME, MTech, five-year and two-year MSc, MBA, and MCA. In
+addition, PSG Tech is a recognized QIP (Quality Improvement Programme) centre for postgraduate and
+PhD research programmes, reflecting its strong focus on advanced learning and research.
+                </p>
             </div>
             <div className="about-card">
               <h3 className="subsection-title">DEPARTMENT OF APPAREL & FASHION DESIGN</h3>
               <p className="text-content">
-                The Department of Apparel and Fashion Design offers a unique five-year integrated M.Sc. Fashion Design and Merchandising degree program, pioneering at the university level. Over the past decade, it has cultivated a rich pool of specialists equipped to meet the challenges of the dynamic fashion industry. Our students are trained to think both creatively and conscientiously, preparing them for leadership roles in the fashion sector.
-              </p>
+                The Department of Apparel and Fashion Design offers a comprehensive five-year integrated M.Sc.
+Fashion Design & Merchandising programme, built on a three-pronged approach that focuses on design,
+production, and management. Over the past decade, the department has consistently nurtured a pool
+of versatile graduates who are well-prepared to meet the evolving challenges of the fashion industry by
+applying creative and responsible design solutions.
+Students benefit from access to state-of-the-art facilities, including specialized laboratories for Pattern
+Making, Garment Construction, Computer-Aided Design (CAD), WGSN Trend Forecasting, Embroidery,
+and Photography, along with a dedicated Design Studio that encourages innovation and creative
+exploration.
+The department actively promotes academic and professional growth through a diverse array of initiatives
+such as national conferences, expert talks, hands-on workshops, webinars, and various co-curricular
+and extra-curricular activities. These efforts are designed to enrich student learning, provide meaningful
+industry exposure, and support the holistic development of future fashion professionals.
+
+                </p>
+            </div>
+            <div className="about-card">
+              <h3 className="subsection-title">THE CONFERENCE</h3>
+              <p className="text-content">
+                The National Conference on Disruptive Technologies in Fashion (NCDTF 26) delves into the transformative
+impact of emerging technologies on the fashion industry. This event will spotlight cutting-edge innovations
+such as Al-driven trend forecasting, blockchain for supply chain transparency, 3D printing for on-demand production, and the use of sustainable materials. With the rise of wearable technology and augmented
+reality, the way fashion is consumed and experienced is being revolutionized. NCDTF 26 aims to bring
+together industry professionals, researchers, and academicians to foster collaboration, share insights,
+and discuss how these technologies are reshaping design, production, and management in fashion. А
+key focus will be on how these disruptive tools contribute to greater efficiency, enhanced personalization,
+and sustainable practices, ultimately reducing the environmental footprint of the fashion industry in an increasingly digital and eco-conscious world.
+
+                </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Theme Section */}
-      <section id="theme" className="section bg-light">
+      
+
+
+      {/* Call for Papers */}
+<section id="papers" className="section">
   <div className="container">
-    <h2 className="section-title">Conference Theme</h2>
-    <div className="theme-content">
+    <h2 className="section-title">Call for Papers</h2>
+    <div className="papers-content">
       <p className="text-content">
-      The conference on <strong>Disruptive Technologies in Fashion – NCDTF 25</strong> explores how innovations like AI-driven trend forecasting, sustainable materials, blockchain, and 3D printing are transforming the fashion industry. From design to consumer experiences, technologies such as wearables and AR are driving efficiency, sustainability, and personalization in a digital, eco-conscious world.
+        NCDTF 26 invites students, researchers, and industry professionals to participate in the conference through oral presentations. Authors are encouraged to submit abstracts online, following the prescribed format, with a maximum limit of 300 words. Submissions are welcome in the following thematic areas:
       </p>
-      <div className="theme-grid">
-        <div className="theme-card">
-          <h4>AI & Trend Forecasting</h4>
-          <p>AI-driven insights are enabling accurate forecasting of fashion trends, helping designers stay ahead and meet consumer demand effectively.</p>
+      <div className="papers-grid">
+        <div className="paper-topic">
+          <span className="topic-icon">🔄</span>
+          <h4>3D Printing: Revolutionizing Fashion Design</h4>
         </div>
-        <div className="theme-card">
-          <h4>Blockchain & 3D Printing</h4>
-          <p>Blockchain enhances transparency in the supply chain, while 3D printing supports on-demand, waste-reducing production models.</p>
+        <div className="paper-topic">
+          <span className="topic-icon">🤖</span>
+          <h4>Artificial Intelligence & Machine Learning in Fashion</h4>
         </div>
-        <div className="theme-card">
-          <h4>Wearables & AR</h4>
-          <p>Wearable technology and augmented reality are transforming how consumers experience and interact with fashion, blending digital and physical worlds.</p>
+        <div className="paper-topic">
+          <span className="topic-icon">👕</span>
+          <h4>Smart Fabrics and Wearable Technology</h4>
+        </div>
+        <div className="paper-topic">
+          <span className="topic-icon">⛓️</span>
+          <h4>Blockchain for Transparency and Traceability in Fashion</h4>
+        </div>
+        <div className="paper-topic">
+          <span className="topic-icon">🕶️</span>
+          <h4>Augmented Reality (AR): Enhancing Fashion Design & Retail Experiences</h4>
+        </div>
+        <div className="paper-topic">
+          <span className="topic-icon">🎮</span>
+          <h4>Virtual Reality (VR): Transforming the Fashion Shopping Journey</h4>
+        </div>
+        <div className="paper-topic">
+          <span className="topic-icon">🌱</span>
+          <h4>Sustainable Fashion through Technological Innovations</h4>
+        </div>
+        <div className="paper-topic">
+          <span className="topic-icon">🛍️</span>
+          <h4>E-Commerce and the Digital Transformation of Fashion</h4>
+        </div>
+        <div className="paper-topic">
+          <span className="topic-icon">📊</span>
+          <h4>AI-Powered Fashion Trend Forecasting</h4>
+        </div>
+        <div className="paper-topic">
+          <span className="topic-icon">🎭</span>
+          <h4>Virtual Runways and the Future of Fashion Shows</h4>
+        </div>
+        <div className="paper-topic">
+          <span className="topic-icon">♻️</span>
+          <h4>Circular Fashion: Creating a Sustainable Clothing Economy</h4>
+        </div>
+        <div className="paper-topic">
+          <span className="topic-icon">👗</span>
+          <h4>Emergence of Digital-Only Fashion Collections</h4>
         </div>
       </div>
     </div>
@@ -139,100 +211,62 @@ const FashionTechConference = () => {
 </section>
 
 
-      {/* Call for Papers */}
-      <section id="papers" className="section">
-        <div className="container">
-          <h2 className="section-title">Call for Papers</h2>
-          <div className="papers-content">
-            <p className="text-content">
-              We invite authors to submit abstracts online in the prescribed format with a maximum of 300 words, in the following areas. <strong>Selected full papers will be published as Conference Proceedings with ISBN Number. Certificates will be given to all the authors.</strong>
-            </p>
-            <div className="papers-grid">
-              <div className="paper-topic">
-                <span className="topic-icon">🔄</span>
-                <h4>3D Printing and Fashion Design</h4>
-              </div>
-              <div className="paper-topic">
-                <span className="topic-icon">🤖</span>
-                <h4>Artificial Intelligence and Machine Learning in Fashion</h4>
-              </div>
-              <div className="paper-topic">
-                <span className="topic-icon">📱</span>
-                <h4>Wearable Technology and Smart Fabrics</h4>
-              </div>
-              <div className="paper-topic">
-                <span className="topic-icon">⛓️</span>
-                <h4>Blockchain and Transparency in Fashion</h4>
-              </div>
-              <div className="paper-topic">
-                <span className="topic-icon">🕶️</span>
-                <h4>Virtual and Augmented Reality in Fashion Retail</h4>
-              </div>
-              <div className="paper-topic">
-                <span className="topic-icon">🌱</span>
-                <h4>Sustainable Fashion and Technological Innovations</h4>
-              </div>
-              <div className="paper-topic">
-                <span className="topic-icon">🛍️</span>
-                <h4>E-Commerce and Digital Transformation in Fashion</h4>
-              </div>
-              <div className="paper-topic">
-                <span className="topic-icon">📊</span>
-                <h4>AI in Trend Forecasting</h4>
-              </div>
-              <div className="paper-topic">
-                <span className="topic-icon">🎭</span>
-                <h4>The Rise of Virtual Runways & Changing Fashion Shows</h4>
-              </div>
-              <div className="paper-topic">
-                <span className="topic-icon">♻️</span>
-                <h4>Circular Fashion for a Sustainable Clothing Economy</h4>
-              </div>
-              <div className="paper-topic">
-                <span className="topic-icon">🎨</span>
-                <h4>The Role of NFTs and Virtual Clothing</h4>
-              </div>
-              <div className="paper-topic">
-                <span className="topic-icon">👗</span>
-                <h4>Digital Fashion</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Important Dates */}
       <section id="dates" className="section bg-light">
         <div className="container">
           <h2 className="section-title">Important Dates</h2>
           <div className="dates-timeline">
             <div className="timeline-item">
-              <div className="date">July 30, 2025</div>
+              <div className="date">September 30, 2025</div>
               <div className="date-event">Submission of Abstracts</div>
             </div>
             <div className="timeline-connector"></div>
             <div className="timeline-item">
-              <div className="date">Aug 10, 2025</div>
+              <div className="date">October 10, 2025</div>
               <div className="date-event">Acceptance of Abstracts</div>
             </div>
             <div className="timeline-connector"></div>
             <div className="timeline-item">
-              <div className="date">Aug 25, 2025</div>
+              <div className="date">October 31, 2025</div>
               <div className="date-event">Full Paper Submission</div>
             </div>
             <div className="timeline-connector"></div>
             <div className="timeline-item">
-              <div className="date">Sep 01, 2025</div>
+              <div className="date">November 01, 2025</div>
               <div className="date-event">Registration starts on</div>
             </div>
             <div className="timeline-connector"></div>
             <div className="timeline-item">
-              <div className="date">Sep 12, 2025</div>
+              <div className="date">November 30, 2025</div>
               <div className="date-event">Last Date for Registration</div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Publication & Certificates Section */}
+<section id="publication-certificates" className="section publication-section">
+  <div className="container">
+    <h2 className="section-title">Publication & Certificates</h2>
+    <div className="pub-cert-grid">
+      <div className="pub-cert-card">
+        <span className="pub-cert-icon">📚</span>
+        <h3>Publication</h3>
+        <p>
+          Selected full papers will be published in the <strong>Conference Proceedings</strong>, which will have an <strong>ISBN number</strong>.
+        </p>
+      </div>
+      <div className="pub-cert-card">
+        <span className="pub-cert-icon">🏆</span>
+        <h3>Certificates</h3>
+        <p>
+          Certificates will be awarded to <strong>presenting authors</strong> and all <strong>registered co-authors</strong> for their contributions.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Registration */}
       <section id="registration"className="section bg-gray">
@@ -257,13 +291,18 @@ const FashionTechConference = () => {
             
           </tr>
           <tr className="table-row alt-row">
-            <td>Faculty/Research Scholars</td>
+            <td>Academicians</td>
             <td>₹ 3,000</td>
+            
+          </tr>
+          <tr className="table-row alt-row">
+            <td>Research Scholars</td>
+            <td>₹ 2,000</td>
             
           </tr>
           <tr className="table-row">
             <td>UG/PG Students</td>
-            <td>₹ 1,500</td>
+            <td>₹ 1,000</td>
             
           </tr>
         </tbody>
@@ -284,7 +323,7 @@ const FashionTechConference = () => {
     <div className="payment-box">
       <h3>Mode of Payment for Registration</h3>
       <ul>
-        <li><strong>Payment Type:</strong> Internet/Mobile Banking / GPay / Paytm</li>
+        <li><strong>Payment Type:</strong> Online payment</li>
         <li><strong>Account Number:</strong> 1481267367</li>
         <li><strong>Account Holder:</strong> PSG Centre for Non formal and Continuing Education (PSG CNCE)</li>
         <li><strong>Bank Name:</strong> Central Bank of India</li>
@@ -312,7 +351,7 @@ const FashionTechConference = () => {
           <div className="advisor-card">
             <div className="advisor-content">
               <h3>Dr. Kaustav SenGupta</h3>
-              <div className="advisor-role">Associate Professor, Centre Coordinator and Chairperson I/C- NIFT Campus, Chennai.</div>
+              <div className="advisor-role">Link Chairperson, F&LA and Director, Vision Nxt, NIFT, Chennai</div>
             </div>
           </div>
           <div className="advisor-card">
@@ -336,7 +375,7 @@ const FashionTechConference = () => {
           <div className="advisor-card">
             <div className="advisor-content">
               <h3>Mr. Shashank Johri</h3>
-              <div className="advisor-role">Research and Design - UX Design for Sustainability, A Bunch of Designers (ABOD), Founder, Bengaluru.</div>
+              <div className="advisor-role">Founder, A Bunch of Designers (ABOD), Bengaluru</div>
             </div>
           </div>
         </div>
