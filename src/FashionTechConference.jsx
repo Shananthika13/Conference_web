@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import "./FashionTechConference.css"
-// import brochurePDF from "./assets/documents/Brochure.pdf"
+import brochurePDF from "./assets/documents/Brochure.pdf"
 
 const FashionTechConference = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -23,7 +23,7 @@ const FashionTechConference = () => {
     // window.open("https://your-domain.com/path/to/brochure.pdf", "_blank")
 
     // Option 2: Use a placeholder URL for now
-    window.open("/placeholder-brochure.pdf", "_blank")
+    window.open(brochurePDF, "_blank");
 
     // Option 3: Show an alert if PDF is not available yet
     // alert("Brochure will be available soon. Please check back later.")
@@ -530,7 +530,7 @@ const FashionTechConference = () => {
 
           {/* Main Sponsor Table */}
           <div className="main-sponsor-section">
-            <h3>Partnership Opportunities</h3>
+            
             <div className="sponsor-cards sponsor-cards-grid">
               <div className="sponsor-row sponsor-row-three">
                 <div className="sponsor-card platinum">
