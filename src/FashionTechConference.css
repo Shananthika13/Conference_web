@@ -134,7 +134,7 @@ body::before {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 3rem; /* Balanced space on left & right */
+  padding: 0 1rem; /* Reduced padding for more space */
 }
 
 .nav-brand {
@@ -165,14 +165,13 @@ body::before {
   font-size: 2rem;
   line-height: 1.2;
   white-space: nowrap;
-  padding-right: 2 rem;
+  padding-right: 1.5rem;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 3rem; /* More space between links */
-  margin-left: auto;
+  gap: 1rem; /* Further reduced space between links */
   flex-wrap: nowrap; /* Prevent links from breaking into 2 lines */
   white-space: nowrap; /* Keep text on single line */
 }
@@ -355,7 +354,6 @@ body {
     padding-top: 80px;
   }
 }
-
 /* Hero Section - Enhanced with green/blue theme */
 .hero-section {
   position: relative;
