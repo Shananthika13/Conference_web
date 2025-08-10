@@ -102,12 +102,13 @@ body::before {
   width: 100vw;
   top: 0;
   left: 0;
-  right: 0;
   z-index: 1000;
   backdrop-filter: blur(5px);
   display: flex;
-  margin: 0;
-  padding: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 2rem;
+  box-sizing: border-box;
 }
 
 .nav-bar::before {
@@ -122,12 +123,24 @@ body::before {
 }
 
 @keyframes nav-shimmer {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem; /* Balanced space on left & right */
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .nav-logo {
@@ -135,81 +148,43 @@ body::before {
   width: 15rem;
 }
 
-.conference-name {
-  font-weight: bold;
-  font-size: 1.8rem;
-}
-
-.nav-brand {
-  max-height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 1rem;
-  gap: 2.5rem;
-  padding-left: 1.5rem;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  position: relative;
-  z-index: 2;
-  margin: 0;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.nav-brand {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex: 0 0 auto;
-}
-
 .nav-brand .logo-img {
-  height: 4rem; /* Default size for all logos */
+  height: 6rem;
   width: auto;
   object-fit: contain;
 }
 
-.nav-brand .logo-img.psg-logo {
-  height: 3.5rem; /* Specific size for PSG Logo */
-}
-
-.nav-brand .logo-img.afda-logo {
-  height: 3.5rem; /* Specific size for AFDA Logo */
-}
-
+.nav-brand .logo-img.psg-logo,
+.nav-brand .logo-img.afda-logo,
 .nav-brand .logo-img.years-logo {
-  height: 4rem; /* Specific size for 75 Years Logo */
+  height: 5rem; /* Uniform sizing */
+}
+
+.conference-name {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  padding-right: 2 rem;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 3rem; /* More space between links */
   margin-left: auto;
-  padding-right: 2rem;
-}
-
-.conference-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 10px rgba(240, 255, 240, 0.2);
-  white-space: nowrap;
+  flex-wrap: nowrap; /* Prevent links from breaking into 2 lines */
+  white-space: nowrap; /* Keep text on single line */
 }
 
 .nav-link {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.3s ease;
   position: relative;
-  white-space: nowrap;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
+  padding: 0.3rem 0;
+  transition: all 0.3s ease;
 }
 
 .nav-link::after {
@@ -231,6 +206,7 @@ body::before {
 .nav-link:hover::after {
   width: 100%;
 }
+
 
 /* Mobile menu styles */
 @media (max-width: 768px) {
