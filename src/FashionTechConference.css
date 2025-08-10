@@ -169,6 +169,24 @@ body::before {
   flex: 0 0 auto;
 }
 
+.nav-brand .logo-img {
+  height: 4rem; /* Default size for all logos */
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-brand .logo-img.psg-logo {
+  height: 3.5rem; /* Specific size for PSG Logo */
+}
+
+.nav-brand .logo-img.afda-logo {
+  height: 3.5rem; /* Specific size for AFDA Logo */
+}
+
+.nav-brand .logo-img.years-logo {
+  height: 4rem; /* Specific size for 75 Years Logo */
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -221,22 +239,29 @@ body::before {
   }
 
   .nav-brand {
-    gap: 1.5rem;
+    gap: 0.5rem; /* Reduced gap for mobile */
     padding-left: 1rem;
+  }
+
+  .nav-brand .logo-img {
+    height: 3rem; /* Smaller default size for mobile */
+  }
+
+  .nav-brand .logo-img.psg-logo {
+    height: 2.5rem; /* Smaller specific size for PSG Logo */
+  }
+
+  .nav-brand .logo-img.afda-logo {
+    height: 2.5rem; /* Smaller specific size for AFDA Logo */
+  }
+
+  .nav-brand .logo-img.years-logo {
+    height: 3rem; /* Smaller specific size for 75 Years Logo */
   }
 
   .conference-name {
     font-size: 1.4rem;
     gap: 0.3rem;
-  }
-
-  .nav-logo {
-    height: 4rem;
-    width: 8rem;
-  }
-
-  .conference-name {
-    font-size: 1.2rem;
   }
 
   .mobile-menu-button {
@@ -309,9 +334,20 @@ body::before {
     padding: 0.5rem;
   }
 
-  .nav-logo {
-    height: 3.5rem;
-    width: 7rem;
+  .nav-brand .logo-img {
+    height: 2.5rem; /* Even smaller default size for small mobile */
+  }
+
+  .nav-brand .logo-img.psg-logo {
+    height: 2rem; /* Even smaller specific size for PSG Logo */
+  }
+
+  .nav-brand .logo-img.afda-logo {
+    height: 2rem; /* Even smaller specific size for AFDA Logo */
+  }
+
+  .nav-brand .logo-img.years-logo {
+    height: 2.5rem; /* Even smaller specific size for 75 Years Logo */
   }
 
   .conference-name {
@@ -575,8 +611,10 @@ body {
 
 /* About Section */
 .about-grid {
-  display: grid;
+  display: flex; /* Use flexbox for arrangement */
+  flex-wrap: wrap;
   gap: 2rem;
+  justify-content: center; /* Center items */
 }
 
 .about-card {
@@ -591,6 +629,26 @@ body {
   border-left: 6px solid var(--teal);
   position: relative;
   overflow: hidden;
+}
+
+.about-card.about-college,
+.about-card.about-department {
+  flex: 1 1 calc(50% - 1rem); /* Two columns on larger screens */
+  max-width: calc(50% - 1rem);
+}
+
+.about-card.about-conference {
+  flex: 1 1 100%; /* Full width for the conference card */
+  max-width: 48rem; /* Maintain max-width for centering */
+  margin: 0 auto; /* Center the card */
+}
+
+@media (max-width: 768px) {
+  .about-card.about-college,
+  .about-card.about-department {
+    flex: 1 1 100%; /* Stack vertically on smaller screens */
+    max-width: 100%;
+  }
 }
 
 .about-card::before {
@@ -883,13 +941,18 @@ body {
 }
 
 .pub-cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex; /* Changed to flexbox */
+  flex-wrap: wrap; /* Allow wrapping */
   gap: 25px;
-  justify-content: center;
+  justify-content: center; /* Center items horizontally */
+  align-items: stretch; /* Ensure cards have equal height */
+  max-width: 800px; /* Limit width to keep them aligned */
+  margin: 0 auto; /* Center the grid itself */
 }
 
 .pub-cert-card {
+  flex: 1 1 calc(50% - 12.5px); /* Two cards per row on larger screens */
+  min-width: 280px; /* Maintain min-width */
   background: #e6fffa;
   border: 2px solid var(--teal);
   border-radius: 12px;
@@ -897,6 +960,12 @@ body {
   text-align: center;
   transition: all 0.3s ease;
   box-shadow: 0 6px 12px rgba(46, 139, 87, 0.08);
+}
+
+@media (max-width: 600px) {
+  .pub-cert-card {
+    flex: 1 1 100%; /* Stack vertically on smaller screens */
+  }
 }
 
 .pub-cert-card:hover {
@@ -1217,22 +1286,14 @@ body {
 /* Organizing Committee */
 .org-compact {
   max-width: 1200px;
-  margin: 0;
+  margin: 0 auto; /* Center the container */
   padding: 2rem;
-}
-
-.org-row {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.org-row:last-child {
-  margin-bottom: 0;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack vertically */
+  gap: 1.5rem; /* Gap between stacked items */
 }
 
 .org-member {
-  flex: 1;
   background: linear-gradient(135deg, #e6fffa 0%, #f0fff0 50%, #f0f8ff 100%);
   border-radius: 8px;
   padding: 1rem;
@@ -1305,11 +1366,19 @@ body {
   display: flex;
   gap: 2rem;
   justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .sponsor-row .sponsor-card {
-  flex: 1;
-  max-width: 500px;
+  flex: 1 1 calc(50% - 1rem); /* Two cards per row */
+  max-width: 500px; /* Limit individual card width */
+}
+
+@media (max-width: 768px) {
+  .sponsor-row .sponsor-card {
+    flex: 1 1 100%; /* Stack vertically on smaller screens */
+    max-width: 100%;
+  }
 }
 
 .sponsor-card {
@@ -1401,6 +1470,17 @@ body {
   font-weight: bold;
 }
 
+/* Exhibition Stall Section */
+.exhibition-stall-section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.exhibition-stall-section .sponsor-card {
+  max-width: 500px; /* Limit width for centering */
+  margin: 0 auto; /* Center the card */
+}
+
 /* Modern Pricing Grid */
 .modern-pricing-grid {
   margin-top: 3rem;
@@ -1429,12 +1509,36 @@ body {
 }
 
 .modern-cards {
-  display: grid;
-  gap: 1.5rem;
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items in rows */
+  gap: 1.5rem; /* Gap between cards */
 }
 
-.souvenir-cards {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+.souvenir-cards .modern-card {
+  flex: 0 0 calc(25% - 1.125rem); /* 4 cards per row (25% - gap) */
+  max-width: calc(25% - 1.125rem);
+}
+
+@media (max-width: 1200px) {
+  .souvenir-cards .modern-card {
+    flex: 0 0 calc(33.333% - 1rem); /* 3 cards per row */
+    max-width: calc(33.333% - 1rem);
+  }
+}
+
+@media (max-width: 900px) {
+  .souvenir-cards .modern-card {
+    flex: 0 0 calc(50% - 0.75rem); /* 2 cards per row */
+    max-width: calc(50% - 0.75rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .souvenir-cards .modern-card {
+    flex: 0 0 100%; /* 1 card per row */
+    max-width: 100%;
+  }
 }
 
 .modern-card {
@@ -1919,13 +2023,9 @@ body {
     margin: 0;
   }
 
-  .org-row {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
   .org-member {
-    width: 100%;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 }
 
@@ -1979,16 +2079,10 @@ body {
 }
 
 /* Scrolled Navigation */
-.nav-bar.scrolled {
-  background: rgba(46, 139, 87, 0.95);
-  backdrop-filter: blur(10px);
-}
+/* Removed .nav-bar.scrolled to keep gradient */
 
 /* Active Navigation Link */
-.nav-link.active {
-  color: var(--mint);
-  position: relative;
-}
+/* Removed .nav-link.active to only highlight on hover */
 
 /* Enhanced section title styling */
 .section-title::after {
@@ -2058,9 +2152,9 @@ body {
     font-size: 2rem;
   }
 
-  .about-grid {
+  /* .about-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
+  } */
 
   .papers-list {
     grid-template-columns: repeat(2, 1fr);
@@ -2075,4 +2169,3 @@ body {
     display: none;
   }
 }
-

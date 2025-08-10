@@ -2,11 +2,10 @@
 
 import { useState, useEffect } from "react"
 import "./FashionTechConference.css"
-import brochurePDF from "./assets/documents/Brochure.pdf"
+import brochurePDF from "./assets/documents/Brochure.pdf" // Assuming this path is correct
 
 const FashionTechConference = () => {
   const [isScrolled, setIsScrolled] = useState(false)
-  const [activeSection, setActiveSection] = useState("home")
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
@@ -19,14 +18,7 @@ const FashionTechConference = () => {
   }, [])
 
   const handleDownloadBrochure = () => {
-    // Option 1: Use a direct URL if you have the PDF hosted online
-    // window.open("https://your-domain.com/path/to/brochure.pdf", "_blank")
-
-    // Option 2: Use a placeholder URL for now
-    window.open(brochurePDF, "_blank");
-
-    // Option 3: Show an alert if PDF is not available yet
-    // alert("Brochure will be available soon. Please check back later.")
+    window.open(brochurePDF, "_blank")
   }
 
   const toggleMobileMenu = () => {
@@ -54,70 +46,40 @@ const FashionTechConference = () => {
   return (
     <div className="conference-container">
       {/* Navigation Bar */}
-      <nav className={`nav-bar ${isScrolled ? "scrolled" : ""}`}>
+      <nav className="nav-bar">
         <div className="container nav-container">
           <div className="nav-brand">
-            <img src="/psg_logo.png" alt="PSG Logo" className="nav-logo" />
+            <img src="PSG Logo.png" alt="PSG Logo" className="logo-img psg-logo" />
+            <img src="75yearsLogo_PSGCollegeofTech.png" alt="75 Years Logo" className="logo-img years-logo" />
+            <img src="AFDA LOGO.png" alt="AFDA Logo" className="logo-img afda-logo" />
             <div className="conference-name">NCDTF 2026</div>
           </div>
           <button className="mobile-menu-button" onClick={toggleMobileMenu}>
             {isMobileMenuOpen ? "✕" : "☰"}
           </button>
           <div className={`nav-links ${isMobileMenuOpen ? "mobile-active" : ""}`}>
-            <a
-              href="#home"
-              onClick={handleNavLinkClick}
-              className={`nav-link ${activeSection === "home" ? "active" : ""}`}
-            >
+            <a href="#home" onClick={handleNavLinkClick} className="nav-link">
               Home
             </a>
-            <a
-              href="#about"
-              onClick={handleNavLinkClick}
-              className={`nav-link ${activeSection === "about" ? "active" : ""}`}
-            >
+            <a href="#about" onClick={handleNavLinkClick} className="nav-link">
               About
             </a>
-            <a
-              href="#committee"
-              onClick={handleNavLinkClick}
-              className={`nav-link ${activeSection === "committee" ? "active" : ""}`}
-            >
+            <a href="#committee" onClick={handleNavLinkClick} className="nav-link">
               Committee
             </a>
-            <a
-              href="#papers"
-              onClick={handleNavLinkClick}
-              className={`nav-link ${activeSection === "papers" ? "active" : ""}`}
-            >
+            <a href="#papers" onClick={handleNavLinkClick} className="nav-link">
               Call for Papers
             </a>
-            <a
-              href="#dates"
-              onClick={handleNavLinkClick}
-              className={`nav-link ${activeSection === "dates" ? "active" : ""}`}
-            >
+            <a href="#dates" onClick={handleNavLinkClick} className="nav-link">
               Important Dates
             </a>
-            <a
-              href="#registration"
-              onClick={handleNavLinkClick}
-              className={`nav-link ${activeSection === "registration" ? "active" : ""}`}
-            >
+            <a href="#registration" onClick={handleNavLinkClick} className="nav-link">
               Registration
             </a>
-            <a
-              href="#sponsors"
-              onClick={handleNavLinkClick}
-              className={`nav-link ${activeSection === "sponsors" ? "active" : ""}`}
-            >
+            <a href="#sponsors" onClick={handleNavLinkClick} className="nav-link">
               Sponsors
             </a>
-            <a
-              href="#contact"
-              onClick={handleNavLinkClick}
-              className={`nav-link ${activeSection === "contact" ? "active" : ""}`}
-            >
+            <a href="#contact" onClick={handleNavLinkClick} className="nav-link">
               Contact
             </a>
           </div>
@@ -168,7 +130,7 @@ const FashionTechConference = () => {
         <div className="container">
           <h2 className="section-title">About The Conference</h2>
           <div className="about-grid">
-            <div className="about-card">
+            <div className="about-card about-college">
               <h3 className="subsection-title">PSG COLLEGE OF TECHNOLOGY</h3>
               <p className="text-content">
                 PSG College of Technology, established in 1951, is one of the premier institutions in India, founded by
@@ -180,7 +142,7 @@ const FashionTechConference = () => {
                 reflecting its strong focus on advanced learning and research.
               </p>
             </div>
-            <div className="about-card">
+            <div className="about-card about-department">
               <h3 className="subsection-title">DEPARTMENT OF APPAREL & FASHION DESIGN</h3>
               <p className="text-content">
                 The Department of Apparel and Fashion Design offers a comprehensive five-year integrated M.Sc. Fashion
@@ -197,7 +159,7 @@ const FashionTechConference = () => {
                 development of future fashion professionals.
               </p>
             </div>
-            <div className="about-card">
+            <div className="about-card about-conference">
               <h3 className="subsection-title">THE CONFERENCE</h3>
               <p className="text-content">
                 The National Conference on Disruptive Technologies in Fashion (NCDTF 26) delves into the transformative
@@ -472,43 +434,37 @@ const FashionTechConference = () => {
           <div className="committee-section organizing">
             <h2 className="section-title">Organising Committee</h2>
             <div className="org-compact">
-              <div className="org-row">
-                <div className="org-member">
-                  <div className="member-role">Patron</div>
-                  <div className="member-info">
-                    <h3>Shri L. Gopalakrishnan</h3>
-                    <p>Managing Trustee, PSG & Sons' Charities, Coimbatore</p>
-                  </div>
-                </div>
-                <div className="org-member">
-                  <div className="member-role">Chairman</div>
-                  <div className="member-info">
-                    <h3>Dr. K. Prakasan</h3>
-                    <p>Principal, PSG College of Technology, Coimbatore</p>
-                  </div>
+              <div className="org-member">
+                <div className="member-role">Patron</div>
+                <div className="member-info">
+                  <h3>Shri L. Gopalakrishnan</h3>
+                  <p>Managing Trustee, PSG & Sons' Charities, Coimbatore</p>
                 </div>
               </div>
-              <div className="org-row">
-                <div className="org-member">
-                  <div className="member-role">Convener</div>
-                  <div className="member-info">
-                    <h3>Dr. D. Vijayalakshmi</h3>
-                    <p>
-                      Professor & Head, Department of Apparel & Fashion Design, PSG College of Technology, Coimbatore
-                    </p>
-                  </div>
+              <div className="org-member">
+                <div className="member-role">Chairman</div>
+                <div className="member-info">
+                  <h3>Dr. K. Prakasan</h3>
+                  <p>Principal, PSG College of Technology, Coimbatore</p>
                 </div>
-                <div className="org-member">
-                  <div className="member-role">Organizing Secretaries</div>
-                  <div className="member-info">
-                    <div className="secretary-group">
-                      <h3>Dr. Nirmala Varghese</h3>
-                      <h3>Dr. Mariyam Adnan</h3>
-                      <p>
-                        Associate Professors, Department of Apparel & Fashion Design, PSG College of Technology,
-                        Coimbatore
-                      </p>
-                    </div>
+              </div>
+              <div className="org-member">
+                <div className="member-role">Convener</div>
+                <div className="member-info">
+                  <h3>Dr. D. Vijayalakshmi</h3>
+                  <p>Professor & Head, Department of Apparel & Fashion Design, PSG College of Technology, Coimbatore</p>
+                </div>
+              </div>
+              <div className="org-member">
+                <div className="member-role">Organizing Secretaries</div>
+                <div className="member-info">
+                  <div className="secretary-group">
+                    <h3>Dr. Nirmala Varghese</h3>
+                    <h3>Dr. Mariyam Adnan</h3>
+                    <p>
+                      Associate Professors, Department of Apparel & Fashion Design, PSG College of Technology,
+                      Coimbatore
+                    </p>
                   </div>
                 </div>
               </div>
@@ -530,9 +486,8 @@ const FashionTechConference = () => {
 
           {/* Main Sponsor Table */}
           <div className="main-sponsor-section">
-            
             <div className="sponsor-cards sponsor-cards-grid">
-              <div className="sponsor-row sponsor-row-three">
+              <div className="sponsor-row">
                 <div className="sponsor-card platinum">
                   <div className="sponsor-badge">Platinum</div>
                   <div className="sponsor-amount">₹50,000</div>
@@ -560,21 +515,9 @@ const FashionTechConference = () => {
                     </ul>
                   </div>
                 </div>
-
-                <div className="sponsor-card stall">
-                  <div className="sponsor-badge">Exhibition Stall</div>
-                  <div className="sponsor-amount">₹30,000</div>
-                  <div className="sponsor-benefits">
-                    <ul>
-                      <li>9 × 9 feet stall space</li>
-                      <li>Product display opportunity</li>
-                      <li>Direct customer interaction</li>
-                    </ul>
-                  </div>
-                </div>
               </div>
 
-              <div className="sponsor-row sponsor-row-two">
+              <div className="sponsor-row">
                 <div className="sponsor-card silver">
                   <div className="sponsor-badge">Silver</div>
                   <div className="sponsor-amount">₹20,000</div>
@@ -601,6 +544,22 @@ const FashionTechConference = () => {
               </div>
             </div>
           </div>
+
+          {/* Exhibition Stall */}
+          <section id="exhibition-stall" className="section exhibition-stall-section">
+            <h2 className="section-title">Exhibition Stall</h2>
+            <div className="sponsor-card stall">
+              <div className="sponsor-badge">Exhibition Stall</div>
+              <div className="sponsor-amount">₹30,000</div>
+              <div className="sponsor-benefits">
+                <ul>
+                  <li>9 × 9 feet stall space</li>
+                  <li>Product display opportunity</li>
+                  <li>Direct customer interaction</li>
+                </ul>
+              </div>
+            </div>
+          </section>
 
           {/* Souvenir Advertisement */}
           <div className="modern-pricing-grid">
@@ -683,141 +642,140 @@ const FashionTechConference = () => {
       </section>
 
       {/* Modern Interactive Footer */}
-      
+
       <section id="contact">
-  <footer className="modern-footer">
-    {/* Scroll Buttons */}
-    <div className="scroll-buttons">
-      <button className="scroll-button up" onClick={scrollToTop} aria-label="Scroll to top">
-        <i className="fas fa-chevron-up"></i>
-      </button>
-      <button className="scroll-button down" onClick={scrollToBottom} aria-label="Scroll to bottom">
-        <i className="fas fa-chevron-down"></i>
-      </button>
-    </div>
-
-    <div className="footer-waves">
-      <div className="wave wave1"></div>
-      <div className="wave wave2"></div>
-      <div className="wave wave3"></div>
-    </div>
-
-    <div className="footer-container">
-      <div className="footer-main">
-        <div className="footer-brand">
-          <div className="brand-logo">
-            <h2>NCDTF 2026</h2>
-            <div className="brand-tagline">Disruptive Technologies in Fashion</div>
-          </div>
-          <p className="brand-description">
-            Where fashion meets the future: Experience innovation, inspiration, and the next wave of style at NCDTF
-            2026.
-          </p>
-        </div>
-
-        <div className="footer-links">
-          <div className="link-group">
-            <h4>Quick Access</h4>
-            <ul>
-              <li>
-                <a href="#home">
-                  <i className="fas fa-home"></i> Home
-                </a>
-              </li>
-              <li>
-                <a href="#about">
-                  <i className="fas fa-info-circle"></i> About
-                </a>
-              </li>
-              <li>
-                <a href="#papers">
-                  <i className="fas fa-microphone"></i> Papers
-                </a>
-              </li>
-              <li>
-                <a href="#dates">
-                  <i className="fas fa-calendar"></i> Dates
-                </a>
-              </li>
-            </ul>
+        <footer className="modern-footer">
+          {/* Scroll Buttons */}
+          <div className="scroll-buttons">
+            <button className="scroll-button up" onClick={scrollToTop} aria-label="Scroll to top">
+              <i className="fas fa-chevron-up"></i>
+            </button>
+            <button className="scroll-button down" onClick={scrollToBottom} aria-label="Scroll to bottom">
+              <i className="fas fa-chevron-down"></i>
+            </button>
           </div>
 
-          <div className="link-group">
-            <h4>Conference</h4>
-            <ul>
-              <li>
-                <a href="#registration">
-                  <i className="fas fa-ticket-alt"></i> Registration
-                </a>
-              </li>
-              <li>
-                <a href="#sponsors">
-                  <i className="fas fa-handshake"></i> Sponsors
-                </a>
-              </li>
-              <li>
-                <a href="#committee">
-                  <i className="fas fa-users"></i> Committee
-                </a>
-              </li>
-            </ul>
+          <div className="footer-waves">
+            <div className="wave wave1"></div>
+            <div className="wave wave2"></div>
+            <div className="wave wave3"></div>
           </div>
-        </div>
 
-        <div className="footer-contact">
-          <h4>Get In Touch</h4>
-          <div className="contact-info">
-            <div className="contact-item">
-              <div className="contact-icon">
-                <i className="fas fa-map-marker-alt"></i>
+          <div className="footer-container">
+            <div className="footer-main">
+              <div className="footer-brand">
+                <div className="brand-logo">
+                  <h2>NCDTF 2026</h2>
+                  <div className="brand-tagline">Disruptive Technologies in Fashion</div>
+                </div>
+                <p className="brand-description">
+                  Where fashion meets the future: Experience innovation, inspiration, and the next wave of style at
+                  NCDTF 2026.
+                </p>
               </div>
-              <div className="contact-details">
-                <strong>Location</strong>
-                <span>
-                  PSG College of Technology
-                  <br />
-                  Coimbatore - 641004, Tamil Nadu
-                </span>
+
+              <div className="footer-links">
+                <div className="link-group">
+                  <h4>Quick Access</h4>
+                  <ul>
+                    <li>
+                      <a href="#home">
+                        <i className="fas fa-home"></i> Home
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#about">
+                        <i className="fas fa-info-circle"></i> About
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#papers">
+                        <i className="fas fa-microphone"></i> Papers
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#dates">
+                        <i className="fas fa-calendar"></i> Dates
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="link-group">
+                  <h4>Conference</h4>
+                  <ul>
+                    <li>
+                      <a href="#registration">
+                        <i className="fas fa-ticket-alt"></i> Registration
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#sponsors">
+                        <i className="fas fa-handshake"></i> Sponsors
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#committee">
+                        <i className="fas fa-users"></i> Committee
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="footer-contact">
+                <h4>Get In Touch</h4>
+                <div className="contact-info">
+                  <div className="contact-item">
+                    <div className="contact-icon">
+                      <i className="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div className="contact-details">
+                      <strong>Location</strong>
+                      <span>
+                        PSG College of Technology
+                        <br />
+                        Coimbatore - 641004, Tamil Nadu
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="contact-item">
+                    <div className="contact-icon">
+                      <i className="fas fa-envelope"></i>
+                    </div>
+                    <div className="contact-details">
+                      <strong>Email</strong>
+                      <span>ncdtf.afd@psgtech.ac.in</span>
+                    </div>
+                  </div>
+
+                  <div className="contact-item">
+                    <div className="contact-icon">
+                      <i className="fas fa-phone"></i>
+                    </div>
+                    <div className="contact-details">
+                      <strong>Phone</strong>
+                      <span>+91 9843125007</span>
+                      <span>+91 9940224083</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="contact-item">
-              <div className="contact-icon">
-                <i className="fas fa-envelope"></i>
-              </div>
-              <div className="contact-details">
-                <strong>Email</strong>
-                <span>ncdtf.afd@psgtech.ac.in</span>
-              </div>
-            </div>
-
-            <div className="contact-item">
-              <div className="contact-icon">
-                <i className="fas fa-phone"></i>
-              </div>
-              <div className="contact-details">
-                <strong>Phone</strong>
-                <span>+91 9843125007</span>
-                <span>+91 9940224083</span>
+            <div className="footer-bottom">
+              <div className="footer-bottom-content">
+                <div className="copyright">
+                  <p>
+                    &copy; 2026 NCDTF - National Conference on Disruptive Technologies in Fashion. All rights reserved
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="footer-bottom">
-        <div className="footer-bottom-content">
-          <div className="copyright">
-            <p>
-              &copy; 2026 NCDTF - National Conference on Disruptive Technologies in Fashion. All rights reserved
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-</section>
-
+        </footer>
+      </section>
     </div>
   )
 }
