@@ -549,7 +549,7 @@ const FashionTechConference = () => {
           <section id="exhibition-stall" className="section exhibition-stall-section">
             <h2 className="section-title">Exhibition Stall</h2>
             <div className="sponsor-card stall">
-              <div className="sponsor-badge">Exhibition Stall</div>
+              <div className="sponsor-badge">Stall</div>
               <div className="sponsor-amount">₹30,000</div>
               <div className="sponsor-benefits">
                 <ul>
