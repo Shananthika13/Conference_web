@@ -547,7 +547,7 @@ const FashionTechConference = () => {
 
           {/* Exhibition Stall */}
           <section id="exhibition-stall" className="section exhibition-stall-section">
-            <h2 className="section-title"> Stalls</h2>
+            
             <div className="sponsor-card stall">
               <div className="sponsor-badge">Stall</div>
               <div className="sponsor-amount">₹30,000</div>
@@ -565,7 +565,7 @@ const FashionTechConference = () => {
           <div className="modern-pricing-grid">
             <div className="pricing-category souvenir">
               <div className="category-header">
-                <h3>Souvenir</h3>
+                <h2 className="section-title">Souvenir</h2>
               </div>
               <div className="modern-cards souvenir-cards">
                 <div className="modern-card featured">
