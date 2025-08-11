@@ -547,7 +547,7 @@ const FashionTechConference = () => {
 
           {/* Exhibition Stall */}
           <section id="exhibition-stall" className="section exhibition-stall-section">
-            <h2 className="section-title">Exhibition Stall</h2>
+            <h2 className="section-title"> Stalls</h2>
             <div className="sponsor-card stall">
               <div className="sponsor-badge">Stall</div>
               <div className="sponsor-amount">₹30,000</div>
