@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import "./FashionTechConference.css"
-import brochurePDF from "./assets/documents/Brochure.pdf" // Assuming this path is correct
+import brochurePDF from "./assets/documents/Brochure_latest.pdf" // Assuming this path is correct
 
 const FashionTechConference = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -49,7 +49,7 @@ const FashionTechConference = () => {
       <nav className="nav-bar">
         <div className="container nav-container">
           <div className="nav-brand">
-            <img src="PSG Logo.png" alt="PSG Logo" className="logo-img psg-logo" />
+            <img src="PSGCT-logo.png" alt="PSG Logo" className="logo-img psg-logo" />
             <img src="75yearsLogo_PSGCollegeofTech.png" alt="75 Years Logo" className="logo-img years-logo" />
             <img src="AFDA LOGO.png" alt="AFDA Logo" className="logo-img afda-logo" />
             <div className="conference-name">NCDTF 2026</div>
