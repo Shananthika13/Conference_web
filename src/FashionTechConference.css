@@ -210,6 +210,30 @@ body::before {
   width: 100%;
 }
 
+/* Mobile menu button - enhanced styling */
+.mobile-menu-button {
+  display: none; /* Hidden by default on desktop */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin-left: auto; /* Push to right corner */
+  z-index: 1001;
+}
+
+.mobile-menu-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.mobile-menu-button:active {
+  transform: scale(0.95);
+}
+
 /* Mobile menu styles */
 @media (max-width: 768px) {
   .nav-container {
@@ -243,13 +267,26 @@ body::before {
   }
 
   .mobile-menu-button {
-    display: block;
+    display: block; /* Show menu button on mobile */
     margin-left: auto;
     background: none;
     border: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Slightly larger for better visibility */
     cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    z-index: 1001;
+  }
+
+  .mobile-menu-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+  }
+
+  .mobile-menu-button:active {
+    transform: scale(0.95);
   }
 
   .nav-links {
