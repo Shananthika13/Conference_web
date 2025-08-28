@@ -123,8 +123,12 @@ body::before {
 }
 
 @keyframes nav-shimmer {
-  0% { left: -100%; }
-  100% { left: 100%; }
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 .nav-container {
@@ -205,7 +209,6 @@ body::before {
 .nav-link:hover::after {
   width: 100%;
 }
-
 
 /* Mobile menu styles */
 @media (max-width: 768px) {
@@ -354,6 +357,7 @@ body {
     padding-top: 80px;
   }
 }
+
 /* Hero Section - Enhanced with green/blue theme */
 .hero-section {
   position: relative;
@@ -433,8 +437,7 @@ body {
   margin-bottom: 2rem;
   color: var(--accent-blue);
   text-shadow: 0 1px 3px rgba(70, 130, 180, 0.3);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .hero-date {
@@ -768,6 +771,55 @@ body {
   color: var(--teal);
 }
 
+/* Enhanced mobile responsive styles for Call for Papers section */
+@media (max-width: 768px) {
+  .papers-content {
+    max-width: 100%;
+    margin: 0 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .papers-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .paper-topic {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .topic-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .paper-topic h4 {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .papers-content {
+    margin: 0 0.5rem;
+    padding: 1rem;
+  }
+
+  .paper-topic {
+    padding: 1rem;
+  }
+
+  .paper-topic h4 {
+    font-size: 0.9rem;
+  }
+}
+
 /* Important Dates Section */
 #dates {
   background: linear-gradient(135deg, #f0fff0 0%, #e6fffa 100%);
@@ -829,7 +881,8 @@ body {
 
 .timeline-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(46, 139, 87, 0.15), 0 0 0 1px rgba(46, 139, 87, 0.1);
+  box-shadow: 0 15px 30px rgba(46, 139, 87, 0.15), 0 0 30px rgba(46, 139, 87, 0.1), inset 0 0 20px
+    rgba(240, 255, 240, 0.8);
 }
 
 .timeline-connector {
@@ -1070,6 +1123,93 @@ body {
   font-weight: 600;
   color: var(--primary-green);
   margin-bottom: 0.5rem;
+}
+
+/* Enhanced mobile responsive styles for Registration section */
+@media (max-width: 768px) {
+  .registration-table-container {
+    max-width: 100%;
+    margin: 2rem 1rem 0 1rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .registration-table {
+    font-size: 0.9rem;
+  }
+
+  .table-header th {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .table-row td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .registration-note {
+    padding: 1rem;
+  }
+
+  .payment-box {
+    max-width: 100%;
+    margin: 2rem 1rem 0 1rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .payment-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .payment-box ul {
+    padding: 1rem;
+  }
+
+  .payment-box li {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 0.75rem;
+  }
+
+  .payment-box li strong {
+    margin-bottom: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .registration-table-container {
+    margin: 1.5rem 0.5rem 0 0.5rem;
+    padding: 1rem;
+  }
+
+  .registration-table {
+    font-size: 0.8rem;
+  }
+
+  .table-header th {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.75rem;
+  }
+
+  .table-row td {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .payment-box {
+    margin: 1.5rem 0.5rem 0 0.5rem;
+    padding: 1rem;
+  }
+
+  .payment-box h3 {
+    font-size: 1.2rem;
+  }
+
+  .payment-box ul {
+    padding: 0.75rem;
+  }
 }
 
 /* Payment Box */
@@ -1768,7 +1908,7 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.75rem;
   padding: 0.6rem;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 6px;
@@ -2052,94 +2192,108 @@ body {
   }
 }
 
-/* Scrolled Navigation */
-/* Removed .nav-bar.scrolled to keep gradient */
-
-/* Active Navigation Link */
-/* Removed .nav-link.active to only highlight on hover */
-
-/* Enhanced section title styling */
-.section-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(135deg, var(--teal), var(--accent-blue), var(--secondary-green));
-  margin: 1rem auto 0;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(70, 130, 180, 0.3), 0 0 15px rgba(70, 130, 180, 0.2);
-  animation: title-underline 2s ease-in-out infinite alternate;
-}
-
-@keyframes title-underline {
-  0% {
-    box-shadow: 0 2px 8px rgba(70, 130, 180, 0.3), 0 0 15px rgba(70, 130, 180, 0.2);
-  }
-  100% {
-    box-shadow: 0 2px 12px rgba(70, 130, 180, 0.4), 0 0 25px rgba(70, 130, 180, 0.3);
-  }
-}
-
-/* Enhanced shine effect */
-@keyframes shine {
-  0% {
-    transform: translateX(-100%) translateY(-100%) rotate(45deg);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(100%) translateY(100%) rotate(45deg);
-    opacity: 0;
-  }
-}
-
-.paper-topic::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
-  transform: rotate(45deg);
-  transition: all 0.6s ease;
-  opacity: 0;
-}
-
-.paper-topic:hover::after {
-  animation: shine 1.5s ease forwards;
-}
-
-/* Ensure proper spacing and alignment */
-@media (min-width: 768px) {
-  .hero-title {
-    font-size: 4rem;
+/* Additional mobile responsive improvements for overall website */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
   }
 
-  .hero-subtitle {
-    font-size: 3.25rem;
+  .section {
+    padding: 3rem 0;
   }
 
-  .hero-date {
-    font-size: 2rem;
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
   }
 
-  /* .about-grid {
-    grid-template-columns: repeat(2, 1fr);
-  } */
-
-  .papers-list {
-    grid-template-columns: repeat(2, 1fr);
+  .hero-buttons .btn-primary {
+    width: 100%;
+    max-width: 280px;
   }
 
-  .nav-links {
-    display: flex;
+  .about-grid {
+    grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  .mobile-menu-button {
-    display: none;
+  .sponsor-cards-grid .sponsor-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .sponsor-card {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .modern-cards.souvenir-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .nav-container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .hero-date {
+    font-size: 1.3rem;
+  }
+
+  .hero-venue {
+    font-size: 1rem;
+  }
+
+  .about-card {
+    padding: 1.5rem;
+  }
+
+  .text-content {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .nav-container {
+    padding: 0 0.5rem;
+  }
+
+  .nav-brand {
+    gap: 0.5rem;
+  }
+
+  .logo-img {
+    height: 35px;
+  }
+
+  .conference-name {
+    font-size: 1rem;
   }
 }
