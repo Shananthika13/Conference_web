@@ -17,8 +17,9 @@ const FashionTechConference = () => {
   }, [])
 
   const handleDownloadBrochure = () => {
+    window.open("src/assets/documents/Brochure_latest.pdf","_blank")
     // For now, show an alert since the PDF file doesn't exist
-    alert("Brochure download will be available soon. Please check back later.")
+    
     // When you have the actual PDF file, replace the alert with:
     // window.open("/path/to/your/brochure.pdf", "_blank")
   }
