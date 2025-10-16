@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import "./FashionTechConference.css"
-import brochurePDF from "./assets/documents/Brochure_latest.pdf" // Assuming this path is correct
+import brochurePDF from "./assets/documents/Brochure_lstest.pdf" // Assuming this path is correct
 
 const FashionTechConference = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -18,7 +18,7 @@ const FashionTechConference = () => {
   }, [])
 
   const handleDownloadBrochure = () => {
-    window.open("src/assets/documents/Brochure_latest.pdf","_blank")
+    window.open("src/assets/documents/Brochure_lstest.pdf","_blank")
     // For now, show an alert since the PDF file doesn't exist
     
     // When you have the actual PDF file, replace the alert with:
