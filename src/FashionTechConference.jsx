@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import "./FashionTechConference.css"
-import brochurePDF from "./assets/documents/Brochure_latest.pdf" // Assuming this path is correct
+import brochurePDF from "./assets/documents/Brochure_lstest.pdf" // Assuming this path is correct
 
 const FashionTechConference = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -248,27 +248,27 @@ const FashionTechConference = () => {
           <h2 className="section-title">Important Dates</h2>
           <div className="dates-timeline">
             <div className="timeline-item">
-              <div className="date">September 30, 2025</div>
+              <div className="date">October 31, 2025</div>
               <div className="date-event">Submission of Abstracts</div>
             </div>
             <div className="timeline-connector"></div>
             <div className="timeline-item">
-              <div className="date">October 10, 2025</div>
+              <div className="date">November 10, 2025</div>
               <div className="date-event">Acceptance of Abstracts</div>
             </div>
             <div className="timeline-connector"></div>
             <div className="timeline-item">
-              <div className="date">October 31, 2025</div>
+              <div className="date">November 30, 2025</div>
               <div className="date-event">Full Paper Submission</div>
             </div>
             <div className="timeline-connector"></div>
             <div className="timeline-item">
-              <div className="date">November 01, 2025</div>
+              <div className="date">December 15, 2025</div>
               <div className="date-event">Registration starts on</div>
             </div>
             <div className="timeline-connector"></div>
             <div className="timeline-item">
-              <div className="date">November 30, 2025</div>
+              <div className="date">January 09, 2026</div>
               <div className="date-event">Last Date for Registration</div>
             </div>
           </div>
@@ -550,10 +550,10 @@ const FashionTechConference = () => {
             
             <div className="sponsor-card stall">
               <div className="sponsor-badge">Stall</div>
-              <div className="sponsor-amount">₹30,000</div>
+              <div className="sponsor-amount">₹25,000</div>
               <div className="sponsor-benefits">
                 <ul>
-                  <li>9 × 9 feet stall space</li>
+                  <li>10 × 10 feet stall space</li>
                   <li>Product display opportunity</li>
                   <li>Direct customer interaction</li>
                 </ul>
