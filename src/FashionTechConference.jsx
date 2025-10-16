@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import "./FashionTechConference.css"
-import brochurePDF from "./assets/documents/Brochure_lstest.pdf" // Assuming this path is correct
+import brochurePDF from "./assets/documents/Brochure_latest.pdf" // Assuming this path is correct
 
 const FashionTechConference = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -18,7 +18,11 @@ const FashionTechConference = () => {
   }, [])
 
   const handleDownloadBrochure = () => {
-    window.open(brochurePDF, "_blank")
+    window.open("src/assets/documents/Brochure_latest.pdf","_blank")
+    // For now, show an alert since the PDF file doesn't exist
+    
+    // When you have the actual PDF file, replace the alert with:
+    // window.open("/path/to/your/brochure.pdf", "_blank")
   }
 
   const toggleMobileMenu = () => {
@@ -547,7 +551,6 @@ const FashionTechConference = () => {
 
           {/* Exhibition Stall */}
           <section id="exhibition-stall" className="section exhibition-stall-section">
-            
             <div className="sponsor-card stall">
               <div className="sponsor-badge">Stall</div>
               <div className="sponsor-amount">₹25,000</div>
