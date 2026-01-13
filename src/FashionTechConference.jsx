@@ -320,7 +320,7 @@ const FashionTechConference = () => {
               <tbody>
                 <tr className="table-row">
                   <td>Industry Professionals</td>
-                  <td>₹ 5,000</td>
+                  <td>₹ 3,000</td>
                 </tr>
                 <tr className="table-row alt-row">
                   <td>Academicians</td>
@@ -329,6 +329,10 @@ const FashionTechConference = () => {
                 <tr className="table-row alt-row">
                   <td>Research Scholars</td>
                   <td>₹ 2,000</td>
+                </tr>
+                <tr className="table-row alt-row">
+                  <td>Alumni</td>
+                  <td>₹ 1,500</td>
                 </tr>
                 <tr className="table-row">
                   <td>UG/PG Students</td>
